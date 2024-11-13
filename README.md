@@ -1,4 +1,4 @@
-Live App : https://thaboxan.github.io/Portfolio_/
+Live App : (https://athenkosijafta.netlify.app/)
 
 ## Project Requirements
 ### Personal Information: 
