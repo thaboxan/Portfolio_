@@ -45,14 +45,28 @@ Detail your professional experience, including job titles, companies, and descri
 
 Include your educational background.
 
-## Installation
+# Installation
 
 To run this project locally, follow these steps:
 
-1. Clone the repository:
-   ```sh
-   git clone [https://github.com/thaboxan/Portfolio_.git]
+```sh
+# Clone the repository
+git clone https://github.com/thaboxan/portfolio_.git
 
+# Navigate into the project directory
+cd portfolio_
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm start
+
+# Open your browser and navigate to
+# http://localhost:3000
+```
+   
+## Screenshots
 Homepage :![image](https://github.com/user-attachments/assets/fc58cd4d-2205-4055-930b-4913362bfed0)
 About Page: ![image](https://github.com/user-attachments/assets/403040ec-11a1-413c-a668-0db85d8fe83f)
 Projects : ![image](https://github.com/user-attachments/assets/2705a1eb-3a36-40a8-aa7f-306ad22cbaec)
