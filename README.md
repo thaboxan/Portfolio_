@@ -84,9 +84,9 @@ Contact Page: ![image](https://github.com/user-attachments/assets/3ff090c1-de3b-
 Contributions are welcome! Please follow these steps to contribute:
 
 Fork the repository.
-Create a new branch (git checkout -b feature/YourFeature).
-Commit your changes (git commit -m 'Add some feature').
-Push to the branch (git push origin feature/YourFeature).
-Open a pull request.
+-Create a new branch (git checkout -b feature/YourFeature).
+-Commit your changes (git commit -m 'Add some feature').
+-Push to the branch (git push origin feature/YourFeature).
+-Open a pull request.
 
 
