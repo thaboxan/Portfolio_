@@ -4,7 +4,7 @@ Live App: [https://athenkosijafta.netlify.app/](https://athenkosijafta.netlify.a
 
 ## Project Overview
 
-This project is a personal web portfolio showcasing my front-end development skills, projects, and professional experience. It includes sections for personal information, portfolio, skills, experience, and education.
+This project is a personal web portfolio showcasing my front-end development skills, projects, and professional experience. It includes sections for personal information, portfolio, skills and education.
 
 ## Table of Contents
 
