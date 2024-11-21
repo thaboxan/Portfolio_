@@ -72,4 +72,12 @@ About Page: ![image](https://github.com/user-attachments/assets/403040ec-11a1-41
 Projects : ![image](https://github.com/user-attachments/assets/2705a1eb-3a36-40a8-aa7f-306ad22cbaec)
 Contact Page: ![image](https://github.com/user-attachments/assets/3ff090c1-de3b-4fc8-879f-638751a0c82c)
 
+# Technologies Used  
+
+- ![HTML5](https://img.shields.io/badge/-HTML5-E34F26?logo=html5&logoColor=white&style=flat)  
+- ![CSS3](https://img.shields.io/badge/-CSS3-1572B6?logo=css3&logoColor=white&style=flat)  
+- ![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?logo=javascript&logoColor=black&style=flat)  
+- ![Vite](https://img.shields.io/badge/-Vite-646CFF?logo=vite&logoColor=white&style=flat)  
+- ![Docker](https://img.shields.io/badge/-Docker-2496ED?logo=docker&logoColor=white&style=flat)  
+
 
