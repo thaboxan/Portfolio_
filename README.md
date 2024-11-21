@@ -23,20 +23,35 @@ This project is a personal web portfolio showcasing my front-end development ski
 - [License](#license)
 - [Contact](#contact)
 
-### Personal Information: 
+## Project Requirements
+
+### Personal Information
+
 Include sections for your name, a brief bio, contact information, and links to your social media profiles (e.g., LinkedIn, GitHub).
 
-### Portfolio: 
+### Portfolio
+
 Showcase your projects with descriptions, images, and links to live demos or repositories.
 
-### Skills: 
+### Skills
+
 List your technical and non-technical skills.
 
-### Experience: 
+### Experience
+
 Detail your professional experience, including job titles, companies, and descriptions of your roles.
 
-### Education: 
+### Education
+
 Include your educational background.
+
+## Installation
+
+To run this project locally, follow these steps:
+
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/your-username/web-portfolio.git
 
 Homepage :![image](https://github.com/user-attachments/assets/fc58cd4d-2205-4055-930b-4913362bfed0)
 About Page: ![image](https://github.com/user-attachments/assets/403040ec-11a1-413c-a668-0db85d8fe83f)
