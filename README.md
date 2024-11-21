@@ -80,7 +80,7 @@ About Page: ![image](https://github.com/user-attachments/assets/403040ec-11a1-41
 Projects : ![image](https://github.com/user-attachments/assets/2705a1eb-3a36-40a8-aa7f-306ad22cbaec)
 Contact Page: ![image](https://github.com/user-attachments/assets/3ff090c1-de3b-4fc8-879f-638751a0c82c)
 
-#Contributing
+# Contributing
 Contributions are welcome! Please follow these steps to contribute:
 
 Fork the repository.
