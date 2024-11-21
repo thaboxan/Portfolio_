@@ -17,8 +17,9 @@ This project is a personal web portfolio showcasing my front-end development ski
   - [Education](#education)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Screenshots](#screenshots)
+
 - [Technologies Used](#technologies-used)
+- [Screenshots](#screenshots)
 - [Contributing](#contributing)
 - [License](#license)
 - [Contact](#contact)
