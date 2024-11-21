@@ -13,37 +13,31 @@ This project is a personal web portfolio showcasing my front-end development ski
   - [Personal Information](#personal-information)
   - [Portfolio](#portfolio)
   - [Skills](#skills)
-  - [Experience](#experience)
   - [Education](#education)
 - [Installation](#installation)
 
 - [Technologies Used](#technologies-used)
 - [Screenshots](#screenshots)
 - [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
 
 ## Project Requirements
 
 ### Personal Information
 
-Include sections for your name, a brief bio, contact information, and links to your social media profiles (e.g., LinkedIn, GitHub).
+Include sections name, a brief bio, contact information, and links to your social media profiles (e.g., LinkedIn, GitHub).
 
 ### Portfolio
 
-Showcase your projects with descriptions, images, and links to live demos or repositories.
+Showcase projects with descriptions, images, and links to live demos or repositories.
 
 ### Skills
 
 List your technical and non-technical skills.
 
-### Experience
-
-Detail your professional experience, including job titles, companies, and descriptions of your roles.
 
 ### Education
 
-Include your educational background.
+Include educational background.
 
 # Installation
 
