@@ -88,5 +88,13 @@ Contributions are welcome! Please follow these steps to contribute:
 2. Create a new branch:  
    ```sh  
    git checkout -b feature/YourFeature  
+Commit your changes:
+sh
+Copy code
+git commit -m 'Add some feature'  
+Push to the branch:
+sh
 
-
+git push origin feature/YourFeature  
+Open a pull request.
+```
