@@ -51,7 +51,7 @@ To run this project locally, follow these steps:
 
 1. Clone the repository:
    ```sh
-   git clone https://github.com/your-username/web-portfolio.git
+   git clone [https://github.com/your-username/web-portfolio](https://github.com/thaboxan/Portfolio_).git
 
 Homepage :![image](https://github.com/user-attachments/assets/fc58cd4d-2205-4055-930b-4913362bfed0)
 About Page: ![image](https://github.com/user-attachments/assets/403040ec-11a1-413c-a668-0db85d8fe83f)
