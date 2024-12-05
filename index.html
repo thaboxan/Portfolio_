@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="""en"></html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="""UTF-8" />
+    <meta name="""viewport" content="width=device-width, initial-scale=1.0" />
     <title>Thabo Jafta | Front End Web Developer</title>
 
     <!-- Favicon -->
-    <link rel="icon" href="favicon.ico" />
+    <link rel="""icon" href="""favicon.ico" />
 
     <!-- Primary Meta Tags -->
-    <meta name="title" content="Thabo Jafta | Front End Web Developer" />
+    <meta name="""title" content="Thabo Jafta | Front End Web Developer" />
     <meta
       name="description"
       content="Portfolio of Thabo Jafta, a skilled front end web developer specializing in creating stunning and responsive websites."
@@ -30,9 +30,112 @@
       </style>
     <script defer type="module" src="/main.js"></script>
 
+    <style>
+      /* Mobile Navigation Styles */
+      .navbar {
+        width: 100%;
+        padding: 1rem;
+        background: #fff;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+      }
+
+      /* Hide hamburger by default (desktop) */
+      .hamburger {
+        display: none;
+      }
+
+      /* Regular navigation for desktop */
+      .nav-menu {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 2rem;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .nav-link {
+        color: #333;
+        text-decoration: none;
+        font-size: 1.1rem;
+      }
+
+      /* Mobile styles */
+      @media screen and (max-width: 768px) {
+        .hamburger {
+          display: block;
+          cursor: pointer;
+          padding: 0.5rem;
+          position: absolute;
+          right: 1rem;
+          top: 1rem;
+        }
+
+        .bar {
+          display: block;
+          width: 25px;
+          height: 3px;
+          margin: 5px auto;
+          background-color: #333;
+          transition: all 0.3s ease-in-out;
+        }
+
+        .nav-menu {
+          position: fixed;
+          left: -100%;
+          top: 70px;
+          flex-direction: column;
+          width: 100%;
+          text-align: center;
+          transition: 0.3s;
+          background-color: #fff;
+          box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+          padding: 2rem 0;
+        }
+
+        .nav-menu.active {
+          left: 0;
+        }
+
+        .nav-item {
+          margin: 1rem 0;
+        }
+
+        /* Hamburger animation */
+        .hamburger.active .bar:nth-child(2) {
+          opacity: 0;
+        }
+
+        .hamburger.active .bar:nth-child(1) {
+          transform: translateY(8px) rotate(45deg);
+        }
+
+        .hamburger.active .bar:nth-child(3) {
+          transform: translateY(-8px) rotate(-45deg);
+        }
+      }
+    </style>
+
   </head>
   <body>
-   
+    <!-- Add this navigation structure -->
+    <nav class="navbar">
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="#hero" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+        <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
       
       <h1 class="title text-crop">HOVER ME</h1>
       <div class="loading">Loading&#8230;</div>
@@ -42,28 +145,36 @@
         <div class="heading">
           <div class="heading__line-1">Hello, I'm <strong><span class="glitch-window">Thabo</span></strong>.</div>
           <div class="heading__line-2">I'm a front end web developer.</div>
-          <a href="#about" class="heading__link"
-            ><div class="heading-cta">
-              View my work
-              <svg
-                class="heading__arrow"
-                version="1.1"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-              >
-                <title>arrow-right</title>
-                <path
-                  d="M11.293 5.707l5.293 5.293h-11.586c-0.552 0-1 0.448-1 1s0.448 1 1 1h11.586l-5.293 5.293c-0.391 0.391-0.391 1.024 0 1.414s1.024 0.391 1.414 0l7-7c0.092-0.092 0.166-0.202 0.217-0.324 0.101-0.245 0.101-0.521 0-0.766-0.049-0.118-0.121-0.228-0.217-0.324l-7-7c-0.391-0.391-1.024-0.391-1.414 0s-0.391 1.024 0 1.414z"
-                ></path>
-              </svg></div
-          ></a>
+          <div class="heading__buttons">
+            <a href="#about" class="heading__link">
+              <div class="heading-cta">
+                View my work
+                <svg class="heading__arrow" version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                  <title>arrow-right</title>
+                  <path d="M11.293 5.707l5.293 5.293h-11.586c-0.552 0-1 0.448-1 1s0.448 1 1h11.586l-5.293 5.293c-0.391 0.391-0.391 1.024 0 1.414s1.024 0.391 1.414 0l7-7c0.092-0.092 0.166-0.202 0.217-0.324 0.101-0.245 0.101-0.521 0-0.766-0.049-0.118-0.121-0.228-0.217-0.324l-7-7c-0.391-0.391-1.024-0.391-1.414 0s-0.391 1.024 0 1.414z"></path>
+                </svg>
+              </div>
+            </a>
+            <a href="ThaboJaftaCV.pdf" class="heading__link" target="_blank">
+              <div class="heading-cta">
+                Download CV
+                <svg class="heading__arrow" version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                  <title>arrow-right</title>
+                  <path d="M11.293 5.707l5.293 5.293h-11.586c-0.552 0-1 0.448-1 1s0.448 1 1h11.586l-5.293 5.293c-0.391 0.391-0.391 1.024 0 1.414s1.024 0.391 1.414 0l7-7c0.092-0.092 0.166-0.202 0.217-0.324 0.101-0.245 0.101-0.521 0-0.766-0.049-0.118-0.121-0.228-0.217-0.324l-7-7c-0.391-0.391-1.024-0.391-1.414 0s-0.391 1.024 0 1.414z"></path>
+                </svg>
+              </div>
+            </a>
+          </div>
         </div>
       </div>
       <nav class="navigation-bar">
-       <img height="200px" src="https://icons8.com/icon/21278/css3" alt="" srcset="">
-          <li class="navigation__item navigation__item--active" id="nav-hero">
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul class="navigation">
+          <li class="navigation__item" id="nav-hero">
             <a href="#hero">Home</a>
           </li>
           <li class="navigation__item" id="nav-about">
@@ -306,6 +417,27 @@
         </form>
         
       </section>
+
+      <div class="chatbot-icon" id="chatbotIcon">
+        <i class="fa-solid fa-robot"></i>
+    </div>
+    
+    <div class="chatbot" id="chatbot">
+        <header>
+            <h2>Alexis</h2>
+            <button id="minimizeBtn">–</button>
+            <button id="closeBtn">X</button>
+        </header>
+        <ul class="chatbox">
+            <li class="chat incoming">
+                <p>Hi! I'm your Thabo's assistant. Ask me about skills, experience, projects, or how to get in touch!</p>
+            </li>
+        </ul>
+        <div class="input-area">
+            <input type="text" placeholder="Type your message..." id="userInput" />
+            <button id="sendBtn">Send</button>
+        </div>
+    </div>
     </main>
       <footer class="footer">
         <a href="#hero"
@@ -328,7 +460,7 @@
             ><div class="socials__github">
               <img
                 src="images/icons8-github-480.png"
-                alt="github icon"
+                alt=""
               /></div></a
               
           >
@@ -336,12 +468,11 @@
             ><div class="socials__email">
               <img
                 src="images/icons8-linkedin-500.png"
-                alt="linkedin icon"
+                alt=""
               /></div
           ></a>
         </div>
         <p class="copyright">Thabo Jafta the Dev &copy;<span id="current-year"></span></p>
       </footer>
- 
-  
+  </body>
 </html>
