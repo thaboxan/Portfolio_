@@ -1,3 +1,10 @@
+window.addEventListener('load', () => {
+  const loader = document.querySelector('.loader-wrapper');
+  setTimeout(() => {
+    loader.classList.add('hidden');
+  }, 3000); // Hide loader after 3 seconds
+});
+
 document.addEventListener('DOMContentLoaded', () => {
   // Show loader
   const loader = document.querySelector('.loader-wrapper');
@@ -5,11 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // Hide loader after content loads
   window.addEventListener('load', () => {
     setTimeout(() => {
-      loader.classList.add('fade-out');
-      setTimeout(() => {
-        loader.style.display = 'none';
-      }, 500);
-    }, 1000); // Adjust time as needed
+      loader.classList.add('hidden');
+    }, 1000); 
   });
 });
 
