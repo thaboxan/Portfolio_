@@ -1,6 +1,4 @@
 
- Developer
-
 *, *::before, *::after {
   margin: 0;
   padding: 0;
@@ -1507,61 +1505,7 @@ button {
   font-size: large;
 }
 
-/* Navigation Styles */
-.navbar {
-  width: 100%;
-  padding: 1rem;
-  background: #0a192f; /* Dark blue background */
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-}
 
-.nav-menu {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 2rem;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.nav-link {
-  color: #64ffda; /* Mint green text */
-  text-decoration: none;
-  font-size: 1.1rem;
-  transition: all 0.3s ease;
-}
-
-.nav-link:hover {
-  color: #ccd6f6; /* Light gray on hover */
-}
-
-.hamburger .bar {
-  background-color:  var(--main); /* Mint green bars */
-}
-
-@media screen and (max-width: 768px) {
-  .nav-menu {
-    background-color: rgba(2,12,27,0.7); /* Darker blue for mobile menu */
-    box-shadow: 0 10px 30px -10px rgba(2,12,27,0.7);
-  }
-
-  .nav-item {
-    margin: 1rem 0;
-  }
-
-  .nav-link {
-    font-size: 1.2rem;
-    padding: 0.5rem 0;
-  }
-
-  .hamburger.active .bar {
-    background-color:  var(--main); /* Maintain mint green for active state */
-  }
-}
 
 .heading__buttons {
   display: flex;
@@ -1736,5 +1680,3 @@ button {
     from { opacity: 0; }
     to { opacity: 1; }
 }
-
- main
