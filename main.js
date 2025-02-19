@@ -1,3 +1,18 @@
+document.addEventListener('DOMContentLoaded', () => {
+  // Show loader
+  const loader = document.querySelector('.loader-wrapper');
+  
+  // Hide loader after content loads
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      loader.classList.add('fade-out');
+      setTimeout(() => {
+        loader.style.display = 'none';
+      }, 500);
+    }, 1000); // Adjust time as needed
+  });
+});
+
 import canvasDots from "./heroCanvas.js";
 import canvasDotsBg from "./bgCanvas.js";
 
