@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('load', () => {
     setTimeout(() => {
       loader.classList.add('hidden');
-    }, 1000); 
+   }, 1000); 
   });
 });
 
