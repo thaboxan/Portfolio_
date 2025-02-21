@@ -68,11 +68,7 @@ npm start
 - ![Vite](https://img.shields.io/badge/-Vite-646CFF?logo=vite&logoColor=white&style=flat)  
 - ![Docker](https://img.shields.io/badge/-Docker-2496ED?logo=docker&logoColor=white&style=flat)  
    
-## Screenshots
-Homepage :![image](https://github.com/user-attachments/assets/fc58cd4d-2205-4055-930b-4913362bfed0)
-About Page: ![image](https://github.com/user-attachments/assets/403040ec-11a1-413c-a668-0db85d8fe83f)
-Projects : ![image](https://github.com/user-attachments/assets/2705a1eb-3a36-40a8-aa7f-306ad22cbaec)
-Contact Page: ![image](https://github.com/user-attachments/assets/3ff090c1-de3b-4fc8-879f-638751a0c82c)
+
 
 # Contributing  
 
