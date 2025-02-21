@@ -975,7 +975,7 @@ button {
   }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1280px) {
   .heading-cta:before,
   .heading-cta:after {
     width: 28.5rem;
@@ -1929,7 +1929,10 @@ button {
 .skill-item i {
   font-size: 2.8rem;
   background: linear-gradient(135deg, var(--main) 0%, #ffffff 100%);
+  background-clip: text;
   -webkit-background-clip: text;
+  background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 1rem;
   transition: all 0.3s ease;
