@@ -1,21 +1,21 @@
-window.addEventListener('load', () => {
-  const loader = document.querySelector('.loader-wrapper');
-  setTimeout(() => {
-    loader.classList.add('hidden');
-  }, 3000); // Hide loader after 3 seconds
-});
+// window.addEventListener('load', () => {
+//   const loader = document.querySelector('.loader-wrapper');
+//   setTimeout(() => {
+//     loader.classList.add('hidden');
+//   }, 3000); // Hide loader after 3 seconds
+// });
 
-document.addEventListener('DOMContentLoaded', () => {
-  // Show loader
-  const loader = document.querySelector('.loader-wrapper');
+// document.addEventListener('DOMContentLoaded', () => {
+//   // Show loader
+//   const loader = document.querySelector('.loader-wrapper');
   
-  // Hide loader after content loads
-  window.addEventListener('load', () => {
-    setTimeout(() => {
-      loader.classList.add('hidden');
-   }, 1000); 
-  });
-});
+//   // Hide loader after content loads
+//   window.addEventListener('load', () => {
+//     setTimeout(() => {
+//       loader.classList.add('hidden');
+//    }, 1000); 
+//   });
+// });
 
 import canvasDots from "./heroCanvas.js";
 import canvasDotsBg from "./bgCanvas.js";
@@ -179,97 +179,97 @@ document.querySelectorAll(".nav-link").forEach(link =>
 );
 
 
-// Get DOM elements
-const chatbotIcon = document.getElementById('chatbotIcon');
-const chatbot = document.getElementById('chatbot');
-const minimizeBtn = document.getElementById('minimizeBtn');
-const closeBtn = document.getElementById('closeBtn');
-const sendBtn = document.getElementById('sendBtn');
-const userInput = document.getElementById('userInput');
-const chatBox = document.querySelector('.chatbox');
+// // Get DOM elements
+// const chatbotIcon = document.getElementById('chatbotIcon');
+// const chatbot = document.getElementById('chatbot');
+// const minimizeBtn = document.getElementById('minimizeBtn');
+// const closeBtn = document.getElementById('closeBtn');
+// const sendBtn = document.getElementById('sendBtn');
+// const userInput = document.getElementById('userInput');
+// const chatBox = document.querySelector('.chatbox');
 
-// Timeout handling
-let inactivityTimeout;
-let warningTimeout;
-let warningActive = false;
+// // Timeout handling
+// let inactivityTimeout;
+// let warningTimeout;
+// let warningActive = false;
 
-function clearChat() {
-    chatBox.innerHTML = '';
-}
+// function clearChat() {
+//     chatBox.innerHTML = '';
+// }
 
-function showWarningMessage() {
-    if (!warningActive) {
-        addChatMessage("Are you still there? Reply with Yes within 30 seconds to continue the conversation.", 'incoming');
-        warningActive = true;
-        warningTimeout = setTimeout(() => {
-            clearChat();
-            chatbot.style.display = 'none';
-            warningActive = false;
-        }, 30000);
-    }
-}
+// function showWarningMessage() {
+//     if (!warningActive) {
+//         addChatMessage("Are you still there? Reply with Yes within 30 seconds to continue the conversation.", 'incoming');
+//         warningActive = true;
+//         warningTimeout = setTimeout(() => {
+//             clearChat();
+//             chatbot.style.display = 'none';
+//             warningActive = false;
+//         }, 30000);
+//     }
+// }
 
-function resetTimeout() {
-    clearTimeout(inactivityTimeout);
-    clearTimeout(warningTimeout);
-    warningActive = false;
-    inactivityTimeout = setTimeout(() => {
-        showWarningMessage();
-    }, 120000);
-}
+// function resetTimeout() {
+//     clearTimeout(inactivityTimeout);
+//     clearTimeout(warningTimeout);
+//     warningActive = false;
+//     inactivityTimeout = setTimeout(() => {
+//         showWarningMessage();
+//     }, 120000);
+// }
 
-// Chatbot responses
-const botReplies = {
+// // Chatbot responses
+// const botReplies = {
   
-    "hello": "Hi! I'm your portfolio assistant. How can I help you today?",
-    "hi": "Hello! I'm here to tell you about Thabo Jafta's work and experience. What would you like to know?",
-    "about": "I'm Thabo Jafta, a motivated intern specializing in front-end and cloud technologies. I excel in building efficient and scalable solutions using modern frameworks and tools.",
-    "skills": "My key skills include: JavaScript, Python, HTML5/CSS3, MariaDB/MySQL, AWS cloud development, and version control. I am also proficient with frameworks like React.js, Tailwind CSS, and Bootstrap.",
-    "experience": "I have experience as a Maintenance Planner at Trio Consulting, a Biosafety Engineer at the National Institute for Occupational Health, and currently as an intern at Capaciti/WIPRO. Would you like to know more about any specific role?",
-    "education": "I studied Mechanical Engineering, earning a Bachelor of Technology from the University of Johannesburg and a National Diploma from Walter Sisulu University. I also hold a Certificate in Software Engineering from Codespace Academy.",
-    "projects": "I've worked on several exciting projects, including a Kanban live app and other GitHub-hosted solutions. You can view them on my GitHub profile: https://github.com/thaboxan. Would you like more details about any of them?",
-    "contact": "You can reach me at thvbojafta@gmail.com or connect with me on LinkedIn at https://www.linkedin.com/in/thabojafta1.",
-    "default": "I'm not sure I understand. Try asking about my skills, experience, education, projects, or how to contact me."
+//     "hello": "Hi! I'm your portfolio assistant. How can I help you today?",
+//     "hi": "Hello! I'm here to tell you about Thabo Jafta's work and experience. What would you like to know?",
+//     "about": "I'm Thabo Jafta, a motivated intern specializing in front-end and cloud technologies. I excel in building efficient and scalable solutions using modern frameworks and tools.",
+//     "skills": "My key skills include: JavaScript, Python, HTML5/CSS3, MariaDB/MySQL, AWS cloud development, and version control. I am also proficient with frameworks like React.js, Tailwind CSS, and Bootstrap.",
+//     "experience": "I have experience as a Maintenance Planner at Trio Consulting, a Biosafety Engineer at the National Institute for Occupational Health, and currently as an intern at Capaciti/WIPRO. Would you like to know more about any specific role?",
+//     "education": "I studied Mechanical Engineering, earning a Bachelor of Technology from the University of Johannesburg and a National Diploma from Walter Sisulu University. I also hold a Certificate in Software Engineering from Codespace Academy.",
+//     "projects": "I've worked on several exciting projects, including a Kanban live app and other GitHub-hosted solutions. You can view them on my GitHub profile: https://github.com/thaboxan. Would you like more details about any of them?",
+//     "contact": "You can reach me at thvbojafta@gmail.com or connect with me on LinkedIn at https://www.linkedin.com/in/thabojafta1.",
+//     "default": "I'm not sure I understand. Try asking about my skills, experience, education, projects, or how to contact me."
 
-};
+// };
 
-// Event Listeners
-chatbotIcon.addEventListener('click', () => {
-    chatbot.style.display = chatbot.style.display === 'none' || chatbot.style.display === '' ? 'flex' : 'none';
-    resetTimeout();
-});
+// // Event Listeners
+// chatbotIcon.addEventListener('click', () => {
+//     chatbot.style.display = chatbot.style.display === 'none' || chatbot.style.display === '' ? 'flex' : 'none';
+//     resetTimeout();
+// });
 
-minimizeBtn.addEventListener('click', () => {
-    chatbot.style.display = 'none';
-});
+// minimizeBtn.addEventListener('click', () => {
+//     chatbot.style.display = 'none';
+// });
 
-closeBtn.addEventListener('click', () => {
-    chatbot.style.display = 'none';
-    clearChat();
-});
+// closeBtn.addEventListener('click', () => {
+//     chatbot.style.display = 'none';
+//     clearChat();
+// });
 
-sendBtn.addEventListener('click', () => {
-    const userText = userInput.value.trim();
-    if (userText) {
-        if (warningActive) {
-            clearTimeout(warningTimeout);
-            warningActive = false;
-        }
-        addChatMessage(userText, 'outgoing');
-        setTimeout(() => {
-            const botResponse = botReplies[userText.toLowerCase()] || botReplies["default"];
-            addChatMessage(botResponse, 'incoming');
-        }, 1000);
-    }
-    userInput.value = '';
-    resetTimeout();
-});
+// sendBtn.addEventListener('click', () => {
+//     const userText = userInput.value.trim();
+//     if (userText) {
+//         if (warningActive) {
+//             clearTimeout(warningTimeout);
+//             warningActive = false;
+//         }
+//         addChatMessage(userText, 'outgoing');
+//         setTimeout(() => {
+//             const botResponse = botReplies[userText.toLowerCase()] || botReplies["default"];
+//             addChatMessage(botResponse, 'incoming');
+//         }, 1000);
+//     }
+//     userInput.value = '';
+//     resetTimeout();
+// });
 
-function addChatMessage(message, type) {
-    const chatMessage = document.createElement('li');
-    chatMessage.classList.add('chat', type);
-    chatMessage.innerHTML = `<p>${message}</p>`;
-    chatBox.appendChild(chatMessage);
-    chatBox.scrollTop = chatBox.scrollHeight;
-    resetTimeout();
-}
+// function addChatMessage(message, type) {
+//     const chatMessage = document.createElement('li');
+//     chatMessage.classList.add('chat', type);
+//     chatMessage.innerHTML = `<p>${message}</p>`;
+//     chatBox.appendChild(chatMessage);
+//     chatBox.scrollTop = chatBox.scrollHeight;
+//     resetTimeout();
+// }
