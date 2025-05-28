@@ -1503,7 +1503,15 @@ button {
   font-size: large;
 }
 
+#hover::after {
+  content: "Hover over me";
+}
 
+@media (hover: none) and (pointer: coarse) {
+  #hover::after {
+    content: "Click Me!";
+  }
+}
 
 .heading__buttons {
   display: flex;
