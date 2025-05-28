@@ -1,6 +1,6 @@
 # Web Portfolio
 
-Live App: [https://athenkosijafta.netlify.app/](https://athenkosijafta.netlify.app/)
+Live App: [https://athenkosijafta.netlify.app/](https://thabojafta.co.za/)
 
 ## Project Overview
 
