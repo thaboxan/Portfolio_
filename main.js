@@ -20,78 +20,105 @@
 import canvasDots from "./heroCanvas.js";
 import canvasDotsBg from "./bgCanvas.js";
 
-let title = document.querySelector(".title");
-let curs = document.querySelector(".cursor");
-
-document.addEventListener("mousemove", (e) => {
-  let x = e.pageX;
-  let y = e.pageY;
-  curs.style.left = x - 22 + "px";
-  curs.style.top = y - 22 + "px";
-});
-
-document.addEventListener("mouseleave", (e) => {
-  let x = e.pageX;
-  let y = e.pageY;
-  curs.style.left = x - 22 + "px";
-  curs.style.top = y - 22 + "px";
-});
-
-window.onload = function () {
-  canvasDotsBg();
-  canvasDots();
+// Performance optimization: Detect device capabilities
+const isLowPerformanceDevice = () => {
+  return navigator.hardwareConcurrency <= 2 || 
+         /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 };
 
-// loads in about section on scroll
+// Performance optimization: Reduce animations on low-performance devices
+const shouldReduceAnimations = isLowPerformanceDevice() || 
+  (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+
+// Cache DOM elements for better performance
+const cursorElement = document.querySelector(".cursor");
+const profileElement = document.querySelector(".profile");
+const skillsElements = {
+  html: document.querySelector(".skills__item--html"),
+  js: document.querySelector(".skills__item--js"),
+  git: document.querySelector(".skills__item--git"),
+  react: document.querySelector(".skills__item--react"),
+  npm: document.querySelector(".skills__item--npm"),
+  css: document.querySelector(".skills__item--css")
+};
+
+// Optimized cursor tracking with throttling
+let mouseX = 0, mouseY = 0;
+let cursorAnimationFrame;
+
+function updateCursor() {
+  if (cursorElement) {
+    cursorElement.style.transform = `translate(${mouseX - 22}px, ${mouseY - 22}px)`;
+  }
+  cursorAnimationFrame = null;
+}
+
+// Only add cursor tracking if not on mobile/low-performance device
+if (!shouldReduceAnimations && cursorElement) {
+  document.addEventListener("mousemove", (e) => {
+    mouseX = e.pageX;
+    mouseY = e.pageY;
+    
+    if (!cursorAnimationFrame) {
+      cursorAnimationFrame = requestAnimationFrame(updateCursor);
+    }
+  });
+
+  document.addEventListener("mouseleave", (e) => {
+    mouseX = e.pageX;
+    mouseY = e.pageY;
+    
+    if (!cursorAnimationFrame) {
+      cursorAnimationFrame = requestAnimationFrame(updateCursor);
+    }
+  });
+}
+
+window.onload = function () {
+  // Only load canvas animations if not reducing animations
+  if (!shouldReduceAnimations) {
+    canvasDotsBg();
+    canvasDots();
+  } else {
+    // Hide canvas elements on low-performance devices
+    const canvases = document.querySelectorAll('canvas');
+    canvases.forEach(canvas => {
+      if (canvas) canvas.style.display = 'none';
+    });
+  }
+};
+
+// Optimized about section fade-in with better performance
+let aboutAnimationTriggered = false;
 function aboutFadeIn(entries, observer) {
   entries.forEach((entry) => {
-    if (entry.isIntersecting && document.body.scrollWidth > 1300) {
-      document.querySelector(".profile").classList.add("profile__fade-in");
+    if (entry.isIntersecting && document.body.scrollWidth > 1300 && !aboutAnimationTriggered) {
+      aboutAnimationTriggered = true;
+      
+      if (profileElement) {
+        profileElement.classList.add("profile__fade-in");
+      }
 
-      const sleep = (milliseconds) => {
-        return new Promise((resolve) => setTimeout(resolve, milliseconds));
-      };
+      // Use a more efficient timing mechanism
+      const skillAnimations = [
+        { element: skillsElements.html, delay: 1000 },
+        { element: skillsElements.js, delay: 1200 },
+        { element: skillsElements.git, delay: 1300 },
+        { element: skillsElements.npm, delay: 1500 },
+        { element: skillsElements.react, delay: 1700 },
+        { element: skillsElements.css, delay: 1900 }
+      ];
 
-      //html
-      sleep(1000).then(() => {
-        document
-          .querySelector(".skills__item--html")
-          .classList.add("skills__item-fade-in");
+      skillAnimations.forEach(({ element, delay }) => {
+        if (element) {
+          setTimeout(() => {
+            element.classList.add("skills__item-fade-in");
+          }, delay);
+        }
       });
-
-      //js
-      sleep(1200).then(() => {
-        document
-          .querySelector(".skills__item--js")
-          .classList.add("skills__item-fade-in");
-      });
-
-      //git
-      sleep(1300).then(() => {
-        document
-          .querySelector(".skills__item--git")
-          .classList.add("skills__item-fade-in");
-      });
-
-      //react
-      sleep(1700).then(() => {
-        document
-          .querySelector(".skills__item--react")
-          .classList.add("skills__item-fade-in");
-      });
-      //node
-      sleep(1500).then(() => {
-        document
-          .querySelector(".skills__item--npm")
-          .classList.add("skills__item-fade-in");
-      });
-
-      //css
-      sleep(1900).then(() => {
-        document
-          .querySelector(".skills__item--css")
-          .classList.add("skills__item-fade-in");
-      });
+      
+      // Disconnect observer after animation to prevent re-triggering
+      observer.disconnect();
     }
   });
 }
@@ -110,73 +137,98 @@ let options2 = {
 
 let observer = new IntersectionObserver(aboutFadeIn, options);
 
-observer.observe(document.querySelector(".about__content"));
+const aboutContent = document.querySelector(".about__content");
+if (aboutContent) {
+  observer.observe(aboutContent);
+}
 
-// navigation items in nav bar
+// Cache navigation elements
 const navLinks = document.querySelectorAll(".navigation__item");
 
-// change highlighted nav link depending on page position
+// Optimized navigation highlight with throttling
+let lastNavUpdate = 0;
+const NAV_THROTTLE_DELAY = 100; // Throttle nav updates to every 100ms
+
 function navFadeIn(entries, observer) {
+  const now = Date.now();
+  if (now - lastNavUpdate < NAV_THROTTLE_DELAY) return;
+  lastNavUpdate = now;
+  
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       navLinks.forEach((link) => {
         link.classList.remove("navigation__item--active");
       });
 
-      document
-        .querySelector(`#nav-${entry.target.id}`)
-        .classList.add("navigation__item--active");
+      const targetNav = document.querySelector(`#nav-${entry.target.id}`);
+      if (targetNav) {
+        targetNav.classList.add("navigation__item--active");
+      }
     }
   });
 }
 
-// projects section is a lot longer and needs custom settings
 function navFadeInProjects(entries, observer) {
+  const now = Date.now();
+  if (now - lastNavUpdate < NAV_THROTTLE_DELAY) return;
+  lastNavUpdate = now;
+  
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       navLinks.forEach((link) => {
         link.classList.remove("navigation__item--active");
       });
 
-      document
-        .querySelector(`#nav-${entry.target.id}`)
-        .classList.add("navigation__item--active");
+      const targetNav = document.querySelector(`#nav-${entry.target.id}`);
+      if (targetNav) {
+        targetNav.classList.add("navigation__item--active");
+      }
     }
   });
 }
 
 let observerNav = new IntersectionObserver(navFadeIn, options);
 
-observerNav.observe(document.querySelector("#hero"));
-observerNav.observe(document.querySelector("#about"));
-observerNav.observe(document.querySelector("#education"));
-observerNav.observe(document.querySelector("#contact"));
+// Safely observe navigation targets
+const navTargets = ["#hero", "#about", "#education", "#contact"];
+navTargets.forEach(selector => {
+  const element = document.querySelector(selector);
+  if (element) {
+    observerNav.observe(element);
+  }
+});
 
 let observerNavProjects = new IntersectionObserver(navFadeInProjects, options2);
+const projectsElement = document.querySelector("#projects");
+if (projectsElement) {
+  observerNavProjects.observe(projectsElement);
+}
 
-observerNavProjects.observe(document.querySelector("#projects"));
-
-// Get the current year
+// Get the current year and update safely
 const currentYear = new Date().getFullYear();
+const yearElement = document.getElementById("current-year");
+if (yearElement) {
+  yearElement.textContent = currentYear;
+}
 
-// Update the span element with the current year
-document.getElementById("current-year").textContent = currentYear;
-
+// Cache hamburger menu elements
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
 
-hamburger.addEventListener("click", () => {
-  hamburger.classList.toggle("active");
-  navMenu.classList.toggle("active");
-});
+if (hamburger && navMenu) {
+  hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+  });
 
-// Close menu when clicking a link
-document.querySelectorAll(".nav-link").forEach(link => 
-  link.addEventListener("click", () => {
-    hamburger.classList.remove("active");
-    navMenu.classList.remove("active");
-  })
-);
+  // Close menu when clicking a link - with event delegation for better performance
+  navMenu.addEventListener("click", (e) => {
+    if (e.target.classList.contains("nav-link")) {
+      hamburger.classList.remove("active");
+      navMenu.classList.remove("active");
+    }
+  });
+}
 
 
 // // Get DOM elements

@@ -9,7 +9,6 @@ const canvasDotsBg = function () {
     ], // 75% of dots are blue. 25% pink
     color = "rgb(81, 162, 233)";
 
-  // ctx.globalAlpha = 0.8;
   canvas.width = document.body.scrollWidth;
   canvas.height = window.innerHeight;
   canvas.style.display = "block";
@@ -24,23 +23,24 @@ const canvasDotsBg = function () {
   const windowSize = window.innerWidth;
   let dots;
 
+  // Optimized particle counts
   if (windowSize > 1600) {
     dots = {
-      nb: 100,
+      nb: 60, // Reduced from 100
       distance: 0,
       d_radius: 0,
       array: [],
     };
   } else if (windowSize > 1300) {
     dots = {
-      nb: 75,
+      nb: 45, // Reduced from 75
       distance: 0,
       d_radius: 0,
       array: [],
     };
   } else if (windowSize > 1100) {
     dots = {
-      nb: 50,
+      nb: 30, // Reduced from 50
       distance: 0,
       d_radius: 0,
       array: [],
@@ -60,7 +60,6 @@ const canvasDotsBg = function () {
       d_radius: 0,
       array: [],
     };
-
     ctx.globalAlpha = 0;
   } else {
     dots = {
@@ -69,142 +68,150 @@ const canvasDotsBg = function () {
       d_radius: 0,
       array: [],
     };
-
     ctx.globalAlpha = 0;
   }
 
+  // Object pooling for background dots
+  const dotPool = [];
+  
   function Dot() {
     this.x = Math.random() * canvas.width;
     this.y = Math.random() * canvas.height;
-
     this.vx = -0.5 + Math.random();
     this.vy = -0.5 + Math.random();
-
     this.radius = Math.random() * 1.5;
-
-    // this.colour = 'hsl(' + 360 * Math.random() + ', 50%, 50%)';
     this.colour = colorDot[Math.floor(Math.random() * colorDot.length)];
+    this.cachedFillStyle = null;
+  }
+  
+  function getDot() {
+    return dotPool.length > 0 ? dotPool.pop() : new Dot();
+  }
+  
+  function releaseDot(dot) {
+    dotPool.push(dot);
   }
 
   Dot.prototype = {
     create: function () {
       ctx.beginPath();
       ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
-      // ctx.fillStyle = this.colour;
 
-      // meed to acount for scroll height since the bg is static and uses mouse position
-      const top =
-        (window.pageYOffset || document.scrollTop) - (document.clientTop || 0);
+      // Cache fill style calculation to avoid repeated string operations
+      if (!this.cachedFillStyle) {
+        const top = (window.pageYOffset || document.scrollTop) - (document.clientTop || 0);
+        const dotDistance = Math.sqrt(
+          (this.x - mousePosition.x) ** 2 + 
+          (this.y - mousePosition.y + top) ** 2
+        );
+        const distanceRatio = dotDistance / (windowSize / 2);
+        this.cachedFillStyle = this.colour.slice(0, -1) + `,${Math.max(0, 1 - distanceRatio)})`;
+      }
 
-      // make the dot colour fade out the further they are from the mouse
-
-      const dotDistance =
-        ((this.x - mousePosition.x) ** 2 +
-          (this.y - mousePosition.y + top) ** 2) **
-        0.5;
-      const distanceRatio = dotDistance / (windowSize / 2);
-
-      // this chops the bracket off the rgb colour and ads an opacity
-      ctx.fillStyle = this.colour.slice(0, -1) + `,${1 - distanceRatio})`;
-      // ctx.fillStyle = this.colour;
-
+      ctx.fillStyle = this.cachedFillStyle;
       ctx.fill();
     },
 
-    animate: function () {
-      // dont animate the first dot, it will follow mouse
-      for (let i = 1; i < dots.nb; i++) {
-        const dot = dots.array[i];
+    update: function () {
+      if (this.y < 0 || this.y > canvas.height) {
+        this.vy = -this.vy;
+      } else if (this.x < 0 || this.x > canvas.width) {
+        this.vx = -this.vx;
+      }
+      this.x += this.vx;
+      this.y += this.vy;
+      
+      // Invalidate cache when position changes
+      this.cachedFillStyle = null;
+    },
 
-        if (dot.y < 0 || dot.y > canvas.height) {
-          dot.vx = dot.vx;
-          dot.vy = -dot.vy;
-        } else if (dot.x < 0 || dot.x > canvas.width) {
-          dot.vx = -dot.vx;
-          dot.vy = dot.vy;
-        }
-        dot.x += dot.vx;
-        dot.y += dot.vy;
+    animate: function () {
+      // Update all dots except the first one
+      for (let i = 1; i < dots.nb; i++) {
+        dots.array[i].update();
       }
     },
 
     line: function () {
-      for (let i = 0; i < dots.nb; i++) {
-        for (let j = 0; j < dots.nb; j++) {
-          const i_dot = dots.array[i];
-          const j_dot = dots.array[j];
-
-          if (
-            i_dot.x - j_dot.x < dots.distance &&
-            i_dot.y - j_dot.y < dots.distance &&
-            i_dot.x - j_dot.x > -dots.distance &&
-            i_dot.y - j_dot.y > -dots.distance
-          ) {
-            if (
-              i_dot.x - mousePosition.x < dots.d_radius &&
-              i_dot.y - mousePosition.y < dots.d_radius &&
-              i_dot.x - mousePosition.x > -dots.d_radius &&
-              i_dot.y - mousePosition.y > -dots.d_radius
-            ) {
-              ctx.beginPath();
-              ctx.moveTo(i_dot.x, i_dot.y);
-              ctx.lineTo(j_dot.x, j_dot.y);
-
-              // make the fill colour fade out the further you are from the mouse
-              const dotDistance =
-                ((i_dot.x - mousePosition.x) ** 2 +
-                  (i_dot.y - mousePosition.y) ** 2) **
-                0.5;
-              let distanceRatio = dotDistance / dots.d_radius;
-
-              // make it so it doesnt fade out completely
-              distanceRatio -= 0.3;
-              if (distanceRatio < 0) {
-                distanceRatio = 0;
-              }
-
-              ctx.strokeStyle = `rgb(81, 162, 233, ${1 - distanceRatio})`;
-
-              ctx.stroke();
-              ctx.closePath();
-            }
-          }
-        }
-      }
+      // Background canvas typically doesn't need line connections
+      // This can be left empty or removed for better performance
     },
   };
 
-  function createDots() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    for (let i = 0; i < dots.nb; i++) {
-      dots.array.push(new Dot());
-      var dot = dots.array[i];
+  let animationId;
+  let lastUpdateTime = 0;
+  const targetFPS = 20; // Lower FPS for background animation
+  const frameDelay = 1000 / targetFPS;
 
-      dot.create();
+  function initializeDots() {
+    // Clear and pool existing dots
+    dots.array.forEach(dot => releaseDot(dot));
+    dots.array = [];
+    
+    // Create new dots using object pool
+    for (let i = 0; i < dots.nb; i++) {
+      const dot = getDot();
+      dot.x = Math.random() * canvas.width;
+      dot.y = Math.random() * canvas.height;
+      dot.vx = -0.5 + Math.random();
+      dot.vy = -0.5 + Math.random();
+      dot.radius = Math.random() * 1.5;
+      dot.colour = colorDot[Math.floor(Math.random() * colorDot.length)];
+      dot.cachedFillStyle = null;
+      
+      dots.array.push(dot);
     }
 
-    // first dot to be relativley large
-    dots.array[0].radius = 1.5;
+    // Configure first dot
+    if (dots.array[0]) {
+      dots.array[0].radius = 1.5;
+      dots.array[0].colour = "#51a2e9";
+    }
+  }
 
-    // first dot to be blue
-    dots.array[0].colour = "#51a2e9";
+  function updateDots(currentTime) {
+    // Throttle to target FPS
+    if (currentTime - lastUpdateTime < frameDelay) {
+      animationId = requestAnimationFrame(updateDots);
+      return;
+    }
+    lastUpdateTime = currentTime;
 
-    dot.animate();
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    
+    // Create and animate dots
+    for (let i = 0; i < dots.nb; i++) {
+      dots.array[i].create();
+    }
+
+    if (dots.array[0]) {
+      dots.array[0].animate();
+    }
+
+    animationId = requestAnimationFrame(updateDots);
   }
 
   window.onscroll = function (parameter) {
     mousePosition.x = window.innerWidth / 2;
     mousePosition.y = window.innerHeight / 2;
 
-    const top =
-      (window.pageYOffset || document.scrollTop) - (document.clientTop || 0);
+    const top = (window.pageYOffset || document.scrollTop) - (document.clientTop || 0);
     mousePosition.y += top;
+    
+    // Invalidate cached styles when scrolling
+    dots.array.forEach(dot => {
+      dot.cachedFillStyle = null;
+    });
   };
 
-  const draw = setInterval(createDots, 1000 / 30);
+  // Initialize and start animation
+  initializeDots();
+  animationId = requestAnimationFrame(updateDots);
 
   window.onresize = function () {
-    clearInterval(draw);
+    if (animationId) {
+      cancelAnimationFrame(animationId);
+    }
     canvasDotsBg();
   };
 };
