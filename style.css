@@ -1187,39 +1187,16 @@ button {
   height: 35px;
   background-color: transparent;
   cursor: pointer;
-  transition: all 0.3s ease;
-  border-radius: 8px;
-  padding: 8px;
+  transition: all 0.2s;
 }
 
 .socials__github:hover,
 .socials__email:hover {
-  transform: scale(1.1);
-  background-color: rgba(0, 128, 128, 0.1);
-  box-shadow: 0 4px 15px rgba(0, 128, 128, 0.3);
+  transform: scale(1.2);
 }
 
 .socials__github {
   margin-right: 1rem;
-  position: relative;
-}
-
-.socials__github::after {
-  content: '';
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  right: -2px;
-  bottom: -2px;
-  background: linear-gradient(45deg, var(--main), #00a0a0, var(--main));
-  border-radius: 10px;
-  z-index: -1;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.socials__github:hover::after {
-  opacity: 0.7;
 }
 
 .socials__email {
