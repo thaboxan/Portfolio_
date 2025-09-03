@@ -15,7 +15,7 @@ const canvasDots = function () {
   canvas.height = window.innerHeight;
   canvas.style.display = 'block';
 
-  ctx.lineWidth = 0.3;
+  ctx.lineWidth = 0.5;
   ctx.strokeStyle = color;
 
   let mousePosition = {
