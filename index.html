@@ -5,6 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Thabo Jafta - Frontend Developer & DevOps Engineer</title>
     
+    <!-- Preconnect to external origins for faster loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="css/styles.css" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&family=Fira+Code:wght@400;500&display=swap" as="style">
+    
     <!-- SEO Meta Tags -->
     <meta name="description" content="Thabo Jafta - Frontend Developer & DevOps Engineer based in Johannesburg, South Africa. Specializing in React, JavaScript, Docker, Kubernetes, and cloud infrastructure. Building modern web applications with clean code.">
     <meta name="keywords" content="Thabo Jafta, Frontend Developer, DevOps Engineer, React Developer, JavaScript, Docker, Kubernetes, AWS, Azure, Web Developer, South Africa, Johannesburg">
@@ -36,33 +46,27 @@
     <meta name="theme-color" content="#0d1117">
     <meta name="msapplication-TileColor" content="#0d1117">
     
-    <!-- Tailwind CSS (CDN for development only) -->
-    <script>
-        // Suppress Tailwind CDN warning
-        if (typeof console !== 'undefined' && console.warn) {
-            const originalWarn = console.warn;
-            console.warn = function(...args) {
-                if (args[0] && typeof args[0] === 'string' && args[0].includes('tailwindcss.com')) {
-                    return; // Suppress Tailwind CDN warning
-                }
-                originalWarn.apply(console, args);
-            };
-        }
-    </script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Critical CSS inline for faster FCP -->
+    <style>
+        :root{--bg-darker:#0d1117;--bg-dark:#161b22;--primary:#00d4ff}
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{background:var(--bg-darker);color:#e6edf3;font-family:'Tajawal',system-ui,sans-serif}
+        .loader-screen{position:fixed;inset:0;background:var(--bg-darker);display:flex;align-items:center;justify-content:center;z-index:9999}
+    </style>
     
     <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Font Awesome - defer loading -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    
+    <!-- Swiper CSS - defer loading -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"></noscript>
+    
+    <!-- Google Fonts - optimized with fewer weights -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
 </head>
 <body class="body-main" data-theme="dark">
@@ -622,7 +626,7 @@
                                                 </a>
                                             </div>
                                         </div>
-                                        <img src="assets/beyondlimits.png" alt="Beyond Limits OT Website" class="project-img" style="width: 100%; height: 100%; object-fit: cover;">
+                                        <img src="assets/beyondlimits.png" alt="Beyond Limits OT Website" class="project-img" loading="lazy" decoding="async" width="400" height="250" style="width: 100%; height: 100%; object-fit: cover;">
                                     </div>
                                     <div class="project-content">
                                         <h3 class="project-title" data-text-en="Beyond Limits OT">Beyond Limits OT</h3>
@@ -652,7 +656,7 @@
                                                 </a>
                                             </div>
                                         </div>
-                                        <img src="assets/MovieWebApp.png" alt="Movie Web App" class="project-img" style="width: 100%; height: 100%; object-fit: cover;">
+                                        <img src="assets/MovieWebApp.png" alt="Movie Web App" class="project-img" loading="lazy" decoding="async" width="400" height="250" style="width: 100%; height: 100%; object-fit: cover;">
                                     </div>
                                     <div class="project-content">
                                         <h3 class="project-title" data-text-en="Movie Web App">Movie Web App</h3>
@@ -709,7 +713,7 @@
                                                 </a>
                                             </div>
                                         </div>
-                                        <img src="assets/aws.png" alt="AWS Cloud Hosting" class="project-img" style="width: 100%; height: 100%; object-fit: cover;">
+                                        <img src="assets/aws.png" alt="AWS Cloud Hosting" class="project-img" loading="lazy" decoding="async" width="400" height="250" style="width: 100%; height: 100%; object-fit: cover;">
                                     </div>
                                     <div class="project-content">
                                         <h3 class="project-title" data-text-en="AWS Cloud Hosting">AWS Cloud Hosting</h3>
@@ -836,12 +840,11 @@
         </div>
     </footer>
 
-    <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <!-- Motion One loaded dynamically -->
-    <script src="js/animations.js"></script>
-    <script src="js/script.js"></script>
+    <!-- Scripts - defer for better performance -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+    <script src="js/animations.js" defer></script>
+    <script src="js/script.js" defer></script>
 </body>
 </html>
 
