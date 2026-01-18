@@ -6,7 +6,7 @@ A modern, responsive portfolio website showcasing my skills as a Frontend Develo
 
 ![Portfolio Preview](assets/og-image.svg)
 
-## ✨ Features
+##  Features
 
 - **Modern Design** - Futuristic dark theme with cyan/violet accents
 - **Responsive** - Fully optimized for desktop, tablet, and mobile devices
@@ -26,7 +26,7 @@ A modern, responsive portfolio website showcasing my skills as a Frontend Develo
 - **Font Awesome** - Icons
 - **Google Fonts** - Tajawal & Fira Code
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 ├── index.html          # Main HTML file
@@ -42,7 +42,7 @@ A modern, responsive portfolio website showcasing my skills as a Frontend Develo
 └── README.md           # This file
 ```
 
-## 🚀 Deployment
+## Deployment
 
 This site is deployed on **Netlify** with automatic deployments from the `main` branch.
 
@@ -56,7 +56,7 @@ The site includes security headers configured in `netlify.toml`:
 - Permissions-Policy
 - Content-Security-Policy
 
-## 📱 Sections
+##  Sections
 
 1. **Hero** - Introduction with animated code-style name
 2. **About** - Bio with animated stats counter
@@ -65,7 +65,7 @@ The site includes security headers configured in `netlify.toml`:
 5. **Projects** - Swiper carousel showcasing featured work
 6. **Contact** - Form with Formspree integration
 
-## 🎨 Color Palette
+##  Color Palette
 
 | Color | Hex | Usage |
 |-------|-----|-------|
@@ -75,12 +75,12 @@ The site includes security headers configured in `netlify.toml`:
 | Card | `#161b22` | Cards, navbar |
 | Text | `#e6edf3` | Primary text |
 
-## 📧 Contact
+## Contact
 
 - **Email:** dev@thabojafta.co.za
 - **LinkedIn:** [linkedin.com/in/thabojafta1](https://www.linkedin.com/in/thabojafta1)
 - **GitHub:** [github.com/thaboxan](https://github.com/thaboxan)
 
-## 📄 License
+##  License
 
 © 2026 Thabo Jafta. All rights reserved.
