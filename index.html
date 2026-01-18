@@ -1,615 +1,841 @@
-<!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Thabo Jafta | DevOps Engineer & Software Developer</title>
-
-  <!-- Favicon -->
-  <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
-  <!-- Primary Meta Tags -->
-  <meta name="title" content="Thabo Jafta | Software Developer, DevOps Engineer, Cloud Specialist in Johannesburg" />
-  <meta name="description"
-    content="Thabo Jafta - DevOps Engineer at Wipro Technologies South Africa, Software Developer, and AWS Cloud Practitioner based in Johannesburg. Experienced in CI/CD, Docker, Kubernetes, AWS, React, Node.js, and building scalable web applications. View my portfolio, CV, and contact me for collaboration." />
-
-  <!-- Canonical URL -->
-  <link rel="canonical" href="https://www.thabojafta.co.za/" />
-
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.thabojafta.co.za/" />
-  <meta property="og:title" content="Thabo Jafta | DevOps Engineer & Software Developer" />
-  <meta property="og:description"
-    content="Portfolio of Thabo Jafta, DevOps Engineer at Wipro Technologies South Africa and Software Developer in Johannesburg. Specializing in AWS, CI/CD, Docker, Kubernetes, React, Node.js, and cloud solutions." />
-  <meta property="og:image" content="https://www.thabojafta.co.za/images/og-image.jpg" />
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:url" content="https://www.thabojafta.co.za/" />
-  <meta name="twitter:title" content="Thabo Jafta | DevOps Engineer & Software Developer" />
-  <meta name="twitter:description"
-    content="Portfolio of Thabo Jafta, DevOps Engineer at Wipro Technologies South Africa and Software Developer in Johannesburg. Specializing in AWS, CI/CD, Docker, Kubernetes, React, Node.js, and cloud solutions." />
-  <meta name="twitter:image" content="https://www.thabojafta.co.za/images/og-image.jpg" />
-
-  <!-- Additional Meta Tags -->
-  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-  <meta name="author" content="Thabo Jafta" />
-  <meta name="keywords"
-    content="Thabo Jafta, Software Developer, DevOps Engineer, Cloud Engineer, AWS, Docker, Kubernetes, CI/CD, React, Node.js, Express.js, JavaScript, Python, HTML5, CSS3, Johannesburg, South Africa, Portfolio, GitHub, LinkedIn, Cloud Practitioner, Front End Developer, Backend Developer, Web Developer, Terraform, Jenkins, Git, MongoDB, MySQL, PostgreSQL, DynamoDB, REST API, Microservices, Automation, Infrastructure as Code, Codespace Academy, Wipro, Capaciti, Praesignis, Cloud Computing, Linux, Scripting, Visual Studio Code, Tailwind CSS, Bootstrap" />
-  <meta name="theme-color" content="#317EFB" />
-  <meta name="geo.region" content="ZA-GP" />
-  <meta name="geo.placename" content="Johannesburg" />
-  <meta name="geo.position" content="-26.2041;28.0473" />
-  <meta name="ICBM" content="-26.2041, 28.0473" />
-  <meta name="contact" content="+27721701931, thvbojafta@gmail.com" />
-  <meta name="linkedin" content="https://www.linkedin.com/in/thabojafta1" />
-  <meta name="github" content="https://github.com/thaboxan" />
-
-  <!-- Structured Data (JSON-LD) -->
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Thabo Jafta",
-      "jobTitle": "Software Developer, DevOps Engineer",
-      "image": "https://www.thabojafta.co.za/images/og-image.jpg",
-      "url": "https://www.thabojafta.co.za/",
-      "sameAs": [
-        "https://www.linkedin.com/in/thabojafta1",
-        "https://github.com/thaboxan"
-      ],
-      "email": "thvbojafta@gmail.com",
-      "telephone": "+27721701931",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Johannesburg",
-        "addressCountry": "South Africa"
-      },
-      "alumniOf": [
-        {
-          "@type": "CollegeOrUniversity",
-          "name": "University of Johannesburg"
-        },
-        {
-          "@type": "CollegeOrUniversity",
-          "name": "Codespace Academy"
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Thabo Jafta - Frontend Developer & DevOps Engineer</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Thabo Jafta - Frontend Developer & DevOps Engineer based in Johannesburg, South Africa. Specializing in React, JavaScript, Docker, Kubernetes, and cloud infrastructure. Building modern web applications with clean code.">
+    <meta name="keywords" content="Thabo Jafta, Frontend Developer, DevOps Engineer, React Developer, JavaScript, Docker, Kubernetes, AWS, Azure, Web Developer, South Africa, Johannesburg">
+    <meta name="author" content="Thabo Jafta">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://thabojafta.co.za">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://thabojafta.co.za">
+    <meta property="og:title" content="Thabo Jafta - Frontend Developer & DevOps Engineer">
+    <meta property="og:description" content="Frontend Developer & DevOps Engineer based in Johannesburg. Building modern web applications with React, JavaScript, and cloud technologies.">
+    <meta property="og:image" content="https://initialcommit.com/img/initialcommit/what-does-a-software-developer-do.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Thabo Jafta Portfolio">
+    <meta property="og:locale" content="en_ZA">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://thabojafta.co.za">
+    <meta name="twitter:title" content="Thabo Jafta - Frontend Developer & DevOps Engineer">
+    <meta name="twitter:description" content="Frontend Developer & DevOps Engineer based in Johannesburg. Building modern web applications with React, JavaScript, and cloud technologies.">
+    <meta name="twitter:image" content="https://initialcommit.com/img/initialcommit/what-does-a-software-developer-do.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="apple-touch-icon" href="assets/favicon.svg">
+    <meta name="theme-color" content="#0d1117">
+    <meta name="msapplication-TileColor" content="#0d1117">
+    
+    <!-- Tailwind CSS (CDN for development only) -->
+    <script>
+        // Suppress Tailwind CDN warning
+        if (typeof console !== 'undefined' && console.warn) {
+            const originalWarn = console.warn;
+            console.warn = function(...args) {
+                if (args[0] && typeof args[0] === 'string' && args[0].includes('tailwindcss.com')) {
+                    return; // Suppress Tailwind CDN warning
+                }
+                originalWarn.apply(console, args);
+            };
         }
-      ],
-      "knowsAbout": [
-        "Software Development", "DevOps", "Cloud Computing", "AWS", "Docker", "Kubernetes", "CI/CD", "React", "Node.js", "Express.js", "JavaScript", "Python", "HTML5", "CSS3", "Terraform", "Jenkins", "Git", "MongoDB", "MySQL", "PostgreSQL", "DynamoDB", "REST API", "Microservices", "Automation", "Infrastructure as Code"
-      ]
-    }
     </script>
-  <!-- Styles and Scripts -->
-  <link href="style.css" rel="stylesheet" />
-  <!-- Devicon CDN for realistic tech icons -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css">
-  <link rel="manifest" href="/site.webmanifest">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Playwrite+ES+Deco:wght@100..400&display=swap');
-  </style>
-  <script defer type="module" src="/main.js"></script>
-
-
-
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+<link rel="stylesheet" href="css/styles.css">
 </head>
-
-<body>
-
-  <div class="loader-wrapper">
-
-    <div class="loader-text">Loading...</div>
-  </div>
-
-  <h1 class="title text-crop">HOVER ME</h1>
-  <!-- <div class="loading">Loading&#8230;</div> -->
-  <div class="cursor"></div>
-  <div class="hero" id="hero">
-    <div class="canvas"><canvas class="connecting-dots"></canvas></div>
-    <div class="heading">
-      <div class="heading__line-1">Hello, I'm <strong><span class="glitch-window">Thabo</span></strong>.</div>
-      <div class="heading__line-2">I'm a DevOps Engineer & Software Developer.</div>
-      <div class="heading__buttons">
-        <a href="#about" class="heading__link">
-          <button class="button-89" role="button">View my work</button>
-        </a>
-        <a href="https://drive.google.com/file/d/15P2ZuKtc0YSOo9MfvaziHK-Zge58aqB5/view?usp=sharing" class="heading__link" target="_blank">
-          <button class="button-89" role="button">Download CV</button>
-        </a>
-      </div>
+<body class="body-main" data-theme="dark">
+    
+    <!-- Loading Screen -->
+    <div class="loader-screen" id="loader">
+        <div class="loader-content">
+            <div class="loader-code-text">
+                <div class="code-line" data-line="1">const portfolio = {</div>
+                <div class="code-line" data-line="2">  loading: true,</div>
+                <div class="code-line" data-line="3">  status: 'initializing...'</div>
+                <div class="code-line" data-line="4">};</div>
+            </div>
+            <div class="loader-spinner-wrapper">
+                <div class="loader-spinner"></div>
+            </div>
+            <div class="loader-progress-wrapper">
+                <div class="loader-progress-bar"></div>
+            </div>
+            <div class="loader-percentage" id="loaderPercent">0%</div>
+        </div>
     </div>
-  </div>
-  <nav class="navigation-bar">
-    <!-- <div class="hamburger">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </div> -->
-    <ul class="navigation">
-      <li class="navigation__item" id="nav-hero">
-        <a href="#hero">Home</a>
-      </li>
-      <li class="navigation__item" id="nav-about">
-        <a href="#about">About</a>
-      </li>
-      <li class="navigation__item" id="nav-education">
-        <a href="#education">Education</a>
-      </li>
-      <li class="navigation__item" id="nav-projects">
-        <a href="#projects">Projects</a>
-      </li>
-      <li class="navigation__item" id="nav-contact">
-        <a href="#contact">Contact</a>
-      </li>
-    </ul>
-  </nav>
-  <main>
-    <div class="main-bg">
-      <div class="canvas"><canvas class="canvas-2"></canvas></div>
-    </div>
-    <section class="about" id="about">
-      <h2 class="about__heading section-heading">About</h2>
-      <div class="about__content">
-        <div class="profile">
-          <p id='hover'></p>
-          <div class="card-swiper">
-            <div class="card-groups">
-              <div class="card-group" data-index="0" data-status="active">
-                <div class="little-card card">
 
+    <!-- Navigation Header -->
+    <header class="main-header" id="header">
+        <nav class="nav-container">
+            <div class="nav-brand">
+                <div class="brand-logo">
+                    <span class="logo-bracket">&lt;</span>
+                    <span class="logo-text">TJ</span>
+                    <span class="logo-bracket">/&gt;</span>
                 </div>
-                <div class="big-card card">
-
-                </div>
-                <div class="little-card card">
-
-                </div>
-                <div class="big-card card">
-
-                </div>
-                <div class="little-card card">
-
-                </div>
-                <div class="big-card card">
-
-                </div>
-                <div class="little-card card">
-
-                </div>
-                <div class="big-card card">
-
-                </div>
-              </div>
-              <div class="card-group" data-index="1" data-status="unknown">
-                <div class="little-card card">
-
-                </div>
-                <div class="big-card card">
-
-                </div>
-
-                <div class="big-card card">
-
-                </div>
-
-                <div class="big-card card">
-
-                </div>
-
-                <div class="big-card card">
-
-                </div>
-              </div>
-              <div class="card-group" data-index="2" data-status="unknown">
-                <div class="little-card card">
-
-                </div>
-                <div class="big-card card">
-
-                </div>
-                <div class="little-card card">
-
-                </div>
-                <div class="big-card card">
-
-                </div>
-                <div class="little-card card">
-
-                </div>
-                <div class="big-card card">
-
-                </div>
-                <div class="little-card card">
-
-                </div>
-                <div class="big-card card">
-
-                </div>
-              </div>
             </div>
-
-          </div>
-
-          <p class="profile__blurb">
-            Software Developer and DevOps Engineer, combining a solid foundation
-            in engineering principles with proven expertise in cloud technologies and automation.
-            AWS re/Start graduate, AWS Cloud Practitioner and Kubernetes + Cloud Native Associate Certified, currently working as a DevOps Engineer with Wipro Technologies South Africa. Leveraging analytical skills and technical expertise to build innovative digital solutions
-            and implement scalable cloud infrastructure through hands-on experience and continuous learning.
-          </p>
-        </div>
-        <div class="skills">
-          <div class="skills__row">
-            <div class="skills__item skills__item--html">
-              <i class="devicon-html5-plain colored" style="font-size: 4rem;"></i>
-              <div class="skills__item-name">HTML5</div>
+            
+            <div class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link active" data-section="home">
+                    <i class="fas fa-home"></i>
+                    <span class="nav-text" data-text-en="Home">Home</span>
+                </a>
+                <a href="#about" class="nav-link" data-section="about">
+                    <i class="fas fa-user"></i>
+                    <span class="nav-text" data-text-en="About">About</span>
+                </a>
+                <a href="#skills" class="nav-link" data-section="skills">
+                    <i class="fas fa-code"></i>
+                    <span class="nav-text" data-text-en="Skills">Skills</span>
+                </a>
+                <a href="#experience" class="nav-link" data-section="experience">
+                    <i class="fas fa-briefcase"></i>
+                    <span class="nav-text" data-text-en="Experience">Experience</span>
+                </a>
+                <a href="#projects" class="nav-link" data-section="projects">
+                    <i class="fas fa-rocket"></i>
+                    <span class="nav-text" data-text-en="Projects">Projects</span>
+                </a>
+                <a href="#contact" class="nav-link" data-section="contact">
+                    <i class="fas fa-envelope"></i>
+                    <span class="nav-text" data-text-en="Contact">Contact</span>
+                </a>
             </div>
-            <div class="skills__item skills__item--react">
-              <i class="devicon-react-original colored" style="font-size: 4rem;"></i>
-              <div class="skills__item-name">React</div>
+            
+            <div class="nav-controls">
+                <button class="theme-toggle" id="themeToggle" title="Toggle Theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="menu-toggle" id="menuToggle" title="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
-            <div class="skills__item skills__item--npm">
-              <i class="devicon-npm-original-wordmark colored" style="font-size: 4rem;"></i>
-              <div class="skills__item-name">NPM</div>
-            </div>
-          </div>
-          <div class="skills__row">
-            <div class="skills__item skills__item--js">
-              <i class="devicon-javascript-plain colored" style="font-size: 4rem;"></i>
-              <div class="skills__item-name">JavaScript</div>
-            </div>
-            <div class="skills__item skills__item--css">
-              <i class="devicon-css3-plain colored" style="font-size: 4rem;"></i>
-              <div class="skills__item-name">CSS3</div>
-            </div>
-            <div class="skills__item skills__item--git">
-              <i class="devicon-git-plain colored" style="font-size: 4rem;"></i>
-              <div class="skills__item-name">Git</div>
-            </div>
-          </div>
-          <div class="skills__row">
+        </nav>
+    </header>
 
-
-
-          </div>
-
-        </div>
-      </div>
-      </div>
-    </section>
-
-    <section class="skills-section" id="skills">
-      <h2 class="skills-section__heading section-heading">Technical Skills</h2>
-      <div class="skills-container">
-        <div class="skills-category">
-          <h3>Frontend Development</h3>
-          <div class="skills-grid">
-              <div class="skill-item" data-skill="HTML5">
-                <i class="devicon-html5-plain colored" style="font-size: 3.5rem;"></i>
-                <span>HTML5</span>
-              </div>
-              <div class="skill-item" data-skill="CSS3">
-                <i class="devicon-css3-plain colored" style="font-size: 3.5rem;"></i>
-                <span>CSS3</span>
-              </div>
-              <div class="skill-item" data-skill="JavaScript">
-                <i class="devicon-javascript-plain colored" style="font-size: 3.5rem;"></i>
-                <span>JavaScript</span>
-              </div>
-              <div class="skill-item" data-skill="React">
-                <i class="devicon-react-original colored" style="font-size: 3.5rem;"></i>
-                <span>React</span>
-              </div>
-          </div>
-        </div>
-
-        <div class="skills-category">
-          <h3>DevOps & Cloud</h3>
-          <div class="skills-grid">
-              <div class="skill-item" data-skill="AWS">
-                <i class="devicon-amazonwebservices-plain-wordmark colored" style="font-size: 3.5rem;"></i>
-                <span>AWS</span>
-              </div>
-              <div class="skill-item" data-skill="Docker">
-                <i class="devicon-docker-plain colored" style="font-size: 3.5rem;"></i>
-                <span>Docker</span>
-              </div>
-              <div class="skill-item" data-skill="Jenkins">
-                <i class="devicon-jenkins-line colored" style="font-size: 3.5rem;"></i>
-                <span>Jenkins</span>
-              </div>
-              <div class="skill-item" data-skill="Git">
-                <i class="devicon-git-plain colored" style="font-size: 3.5rem;"></i>
-                <span>Git</span>
-              </div>
-          </div>
-        </div>
-
-        <div class="skills-category">
-          <h3>Backend & Databases</h3>
-          <div class="skills-grid">
-              <div class="skill-item" data-skill="Node.js">
-                <i class="devicon-nodejs-plain colored" style="font-size: 3.5rem;"></i>
-                <span>Node.js</span>
-              </div>
-              <div class="skill-item" data-skill="MongoDB">
-                <i class="devicon-mongodb-plain colored" style="font-size: 3.5rem;"></i>
-                <span>MongoDB</span>
-              </div>
-              <div class="skill-item" data-skill="MySQL">
-                <i class="devicon-mysql-plain colored" style="font-size: 3.5rem;"></i>
-                <span>MySQL</span>
-              </div>
-              <div class="skill-item" data-skill="PostgreSQL">
-                <i class="devicon-postgresql-plain colored" style="font-size: 3.5rem;"></i>
-                <span>PostgreSQL</span>
-              </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- GitHub Analytics Section -->
-    <section class="github-analytics" id="github-stats">
-      <div class="github-analytics__container">
-        <h2 class="github-analytics__heading section-heading">
-          🚀 GitHub Analytics
-        </h2>
+    <!-- Main Content -->
+    <main class="main-content">
         
-        <!-- GitHub Streak -->
-        <div class="github-streak-container">
-          <img src="https://streak-stats.demolab.com?user=thaboxan&theme=dark&background=1A1A1A&stroke=008080&ring=008080&fire=008080&currStreakNum=FAFAFA&sideNums=FAFAFA&currStreakLabel=008080&sideLabels=00A0A0&dates=FAFAFA&hide_border=true&date_format=j%20M%5B%20Y%5D" 
-               alt="GitHub Streak" 
-               class="github-streak-img">
-        </div>
-        
-        <!-- Stats and Languages Table -->
-        <div class="github-stats-table">
-          <div class="stats-row">
-            <div class="stat-card">
-              <img src="https://github-readme-stats.vercel.app/api?username=thaboxan&show_icons=true&theme=dark&bg_color=1A1A1A&title_color=008080&text_color=FAFAFA&icon_color=008080&border_color=008080&hide_border=true&include_all_commits=true" 
-                   alt="GitHub Stats" 
-                   class="github-stats-img">
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="hero-background">
+                <div class="code-grid-bg"></div>
+                <div class="floating-particles" id="particles"></div>
             </div>
-            <div class="stat-card">
-              <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=thaboxan&layout=compact&theme=dark&bg_color=1A1A1A&title_color=008080&text_color=FAFAFA&border_color=008080&hide_border=true&langs_count=6" 
-                   alt="Top Languages" 
-                   class="github-langs-img">
+            
+            <div class="hero-container">
+                <div class="hero-content">
+                    <div class="hero-greeting">
+                        <span class="greeting-text" data-text-en="Hello, I'm">Hello, I'm</span>
+                        <span class="greeting-cursor">|</span>
+                    </div>
+                    
+                    <h1 class="hero-name" id="heroName">
+                        <span class="name-prefix">const</span>
+                        <span class="name-operator">=</span>
+                        <span class="name-value">Thabo Jafta</span>
+                        <span class="name-suffix">;</span>
+                    </h1>
+                    
+                    <div class="hero-title">
+                        <span class="title-prefix">//</span>
+                        <span class="title-text" data-text-en="Frontend Developer & DevOps Engineer">Frontend Developer & DevOps Engineer</span>
+                    </div>
+                    
+                    <p class="hero-description" data-text-en="Frontend Developer with expertise in React, JavaScript, and modern web technologies. AWS Certified with strong DevOps skills in CI/CD automation and cloud infrastructure.">
+                        Frontend Developer with expertise in React, JavaScript, and modern web technologies. AWS Certified with strong DevOps skills in CI/CD automation and cloud infrastructure.
+                    </p>
+                    
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary">
+                            <span data-text-en="Get In Touch">Get In Touch</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="#projects" class="btn btn-secondary">
+                            <span data-text-en="View Projects">View Projects</span>
+                            <i class="fas fa-code"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="hero-social">
+                        <a href="https://github.com/thaboxan" class="social-icon" title="GitHub" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/thabojafta1" class="social-icon" title="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="mailto:dev@thabojafta.co.za" class="social-icon" title="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="hero-image-wrapper">
+                    <div class="hero-image-container">
+                        <div class="profile-image-glow"></div>
+                        <div class="profile-image-frame">
+                            <div class="profile-image" id="profileImage">
+                                <div class="profile-placeholder">
+                                    <i class="fas fa-code"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="floating-badge badge-1">
+                            <i class="fab fa-react"></i>
+                            <div class="badge-content">
+                                <span class="badge-title">React</span>
+                                <span class="badge-libs">Redux, Hooks, Router</span>
+                            </div>
+                        </div>
+                        <div class="floating-badge badge-2">
+                            <i class="fab fa-js"></i>
+                            <div class="badge-content">
+                                <span class="badge-title">JavaScript</span>
+                                <span class="badge-libs">ES6+, TypeScript</span>
+                            </div>
+                        </div>
+                        <div class="floating-badge badge-3">
+                            <i class="fab fa-aws"></i>
+                            <div class="badge-content">
+                                <span class="badge-title">AWS</span>
+                                <span class="badge-libs">EC2, S3, Lambda</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-        
-
-        
-        <!-- Live Repository Stats -->
-        
-        
-        <!-- Recent Repositories -->
-
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="education-experience" id="education">
-      <h2 class="education-experience__heading section-heading" style="text-align: center;">Education & Experience</h2>
-      <div class="timeline">
-        <!-- Experience -->
-        <div class="timeline-item">
-          <div class="timeline-content">
-            <h3>DevOps Engineer</h3>
-            <h4>Wipro</h4>
-            <p class="timeline-date">Sept 2025 - Present</p>
-            <ul class="timeline-details">
-              <li>Focusing on Technology Services within Industry Cloud & Digital department</li>
-              <li>Managing cloud infrastructure and automation solutions for global enterprise clients</li>
-              <li>Implementing CI/CD pipelines and deployment strategies using Jenkins, GitHub Actions, and Docker</li>
-              <li>Automating infrastructure provisioning with Infrastructure as Code (IaC) using Terraform and AWS CloudFormation</li>
-              <li>Collaborating on cloud-native application development, leveraging containerization with Docker and orchestration using Kubernetes</li>
-              <li>Supporting 24x7 operations for global customers across multiple time zones</li>
-              <li>Contributing to digital transformation initiatives and scalable cloud solutions</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Previous Experience -->
-        <div class="timeline-item">
-          <div class="timeline-content">
-            <h3>DevOps Associate</h3>
-            <h4>Wipro</h4>
-            <p class="timeline-date">Oct 2024 - Aug 2025</p>
-            <ul class="timeline-details">
-              <li>Developed web applications using HTML, CSS, and JavaScript with frameworks like React, Node.js, and Express.js</li>
-              <li>Designed and implemented scalable application architectures using databases such as MongoDB, MySQL, and PostgreSQL</li>
-              <li>Gained hands-on experience managing cloud infrastructure using AWS services including EC2, S3, RDS, and CloudFormation</li>
-              <li>Learned CI/CD pipeline implementation and deployment automation</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Education -->
-        <div class="timeline-item">
-          <div class="timeline-content">
-            <h3>AWS re/Start Graduate</h3>
-            <h4>Amazon Web Services (AWS)</h4>
-            <p class="timeline-date">Sept 2024 - Dec 2024</p>
-            <ul class="timeline-details">
-              <li>Completed intensive cloud computing program</li>
-              <li>Earned AWS Cloud Practitioner certification</li>
-              <li>Gained hands-on experience with AWS services like EC2, S3, RDS, Lambda, and IAM</li>
-              <li>Developed practical cloud infrastructure skills, including networking, security, and automation</li>
-            </ul>
-          </div>
-        </div>
-
-
-        <!-- Education -->
-        <div class="timeline-item">
-          <div class="timeline-content">
-            <h3>Software Development</h3>
-            <h4>CodeSpace Academy</h4>
-            <p class="timeline-date">Jan 2024 - July 2024</p>
-            <ul class="timeline-details">
-              <li>Completed an intensive 6-month, full-time software development program</li>
-              <li>Gained proficiency in HTML, CSS, JavaScript, ReactJS and Databases such as Firebase, MongoDB and
-                mariaDB</li>
-              <li>Developed multiple web applications and projects</li>
-              <li>Learned modern development practices and version control</li>
-            </ul>
-          </div>
-        </div>
-
-
-        <div class="timeline-item">
-          <div class="timeline-content">
-            <h3>Bachelor of Technology: Mechanical Engineering</h3>
-            <h4>University of Johannesburg</h4>
-            <p class="timeline-date">2016</p>
-            <ul class="timeline-details">
-              <li>Developed strong analytical and problem-solving skills</li>
-              <li>Completed projects in engineering design and analysis</li>
-              <li>Foundation in mathematical and scientific principles</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="projects" id="projects">
-      <h2 class="projects__heading section-heading" style="text-align: center;">Projects</h2>
-      <div class="project project-left">
-        <a href="https://kanbanagileboard.netlify.app/" target="_blank">
-          <div class="project__image-container retro">
-            <div class="project__image-image">
-              <img src="images/kanban.png" alt="" />
+            
+            <div class="scroll-indicator">
+                <div class="scroll-mouse">
+                    <div class="scroll-wheel"></div>
+                </div>
+                <span class="scroll-text" data-text-en="Scroll Down">Scroll Down</span>
             </div>
-          </div>
-        </a>
-        <div class="project__info">
-          <h3 class="project__title">Productivity<br />Kanban App</h3>
-          <p class="project__description">
-            Bringing a Kanban Task Management App to life
-            Tech Stack: Javascript, CSS, HTML5
-          </p>
-          <a href="https://kanbanagileboard.netlify.app/" target="_blank">
-            <div class="project__live">Live app</div>
-          </a><a href="https://github.com/thaboxan/THAJAF449_WFO2401_GROUPA_ThaboJafta_JSL11" target="_blank">
-            <div class="project__code">view source code</div>
-          </a>
-        </div>
-      </div>
-      <div class="project project-right">
-        <div class="project__info">
-          <h3 class="project__title">Movie Web App<br /> </h3>
-          <p class="project__description">
-            A movie application that aims to provide users with a seamless experience for browsing and searching movies.
-            Tech Stack: ReactJS, CSS, HTML5, Axios, RESTful API
-          </p>
-          <a href="https://autosynstudios.netlify.app/" target="_blank">
-            <div class="project__live">live app</div>
-          </a><a href="https://github.com/thaboxan/Movie" target="_blank">
-            <div class="project__code">view source code</div>
-          </a>
-        </div>
-        <a href="https://autosynstudios.netlify.app/" target="_blank">
-          <div class="project__image-container todo">
-            <div class="project__image-image">
-              <img src="images/dashboard.png" alt="" />
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section about-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-number">01</span>
+                    <h2 class="section-title">
+                        <span class="title-bracket">&lt;</span>
+                        <span class="title-text" data-text-en="About Me">About Me</span>
+                        <span class="title-bracket">/&gt;</span>
+                    </h2>
+                    <div class="section-line"></div>
+                </div>
+                
+                <div class="about-content">
+                    <div class="about-text-wrapper">
+                        <div class="about-intro">
+                            <p class="about-text" data-text-en="Creative Frontend Developer with a passion for building responsive, user-friendly web applications. Experienced in React.js, JavaScript, HTML5, and CSS3 with a strong foundation in modern development practices. AWS Certified Cloud Practitioner with DevOps skills including CI/CD automation, Docker, and Kubernetes. Combining design sensibility with technical expertise to deliver exceptional digital experiences.">
+                                Creative Frontend Developer with a passion for building responsive, user-friendly web applications. Experienced in React.js, JavaScript, HTML5, and CSS3 with a strong foundation in modern development practices. AWS Certified Cloud Practitioner with DevOps skills including CI/CD automation, Docker, and Kubernetes. Combining design sensibility with technical expertise to deliver exceptional digital experiences.
+                            </p>
+                        </div>
+                        
+                        <div class="about-stats">
+                            <div class="stat-item">
+                                <div class="stat-number" data-count="13">0</div>
+                                <div class="stat-label" data-text-en="Projects Completed">Projects Completed</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number" data-count="2">0</div>
+                                <div class="stat-label" data-text-en="Years Experience">Years Experience</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number" data-count="7">0</div>
+                                <div class="stat-label" data-text-en="Certifications">Certifications</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-image-wrapper">
+                        <div class="about-image-container">
+                            <div class="code-block">
+                                <div class="code-line">
+                                    <span class="code-keyword">const</span>
+                                    <span class="code-variable">developer</span>
+                                    <span class="code-operator">=</span>
+                                    <span class="code-brace">{</span>
+                                </div>
+                                <div class="code-line indent">
+                                    <span class="code-property">name</span>
+                                    <span class="code-operator">:</span>
+                                    <span class="code-string">'Thabo Jafta'</span>
+                                    <span class="code-comma">,</span>
+                                </div>
+                                <div class="code-line indent">
+                                    <span class="code-property">skills</span>
+                                    <span class="code-operator">:</span>
+                                    <span class="code-bracket">[</span>
+                                    <span class="code-string">'React'</span>
+                                    <span class="code-comma">,</span>
+                                    <span class="code-string">'JavaScript'</span>
+                                    <span class="code-comma">,</span>
+                                    <span class="code-string">'CSS'</span>
+                                    <span class="code-bracket">]</span>
+                                    <span class="code-comma">,</span>
+                                </div>
+                                <div class="code-line indent">
+                                    <span class="code-property">passion</span>
+                                    <span class="code-operator">:</span>
+                                    <span class="code-string">'Frontend Dev'</span>
+                                </div>
+                                <div class="code-line">
+                                    <span class="code-brace">}</span>
+                                    <span class="code-semicolon">;</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </a>
-      </div>
-      <div class="project project-left">
-        <a href="https://cachex.netlify.app//" target="_blank">
-          <div class="project__image-container weather">
-            <div class="project__image-image">
-              <img src="images/cache.png" alt="" />
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section skills-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-number">02</span>
+                    <h2 class="section-title">
+                        <span class="title-bracket">&lt;</span>
+                        <span class="title-text" data-text-en="Skills">Skills</span>
+                        <span class="title-bracket">/&gt;</span>
+                    </h2>
+                    <div class="section-line"></div>
+                </div>
+                
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3 class="category-title" data-text-en="Frontend Development">Frontend Development</h3>
+                        <div class="skill-items">
+                            <div class="skill-item" data-skill="React" data-percent="90">
+                                <div class="skill-header">
+                                    <span class="skill-name">React.js</span>
+                                    <span class="skill-percent">0%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-skill="JavaScript" data-percent="90">
+                                <div class="skill-header">
+                                    <span class="skill-name">JavaScript</span>
+                                    <span class="skill-percent">0%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-skill="HTML5" data-percent="95">
+                                <div class="skill-header">
+                                    <span class="skill-name">HTML5</span>
+                                    <span class="skill-percent">0%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-skill="CSS3" data-percent="90">
+                                <div class="skill-header">
+                                    <span class="skill-name">CSS3 / Tailwind</span>
+                                    <span class="skill-percent">0%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3 class="category-title" data-text-en="Backend & APIs">Backend & APIs</h3>
+                        <div class="skill-items">
+                            <div class="skill-item" data-skill="Node.js" data-percent="85">
+                                <div class="skill-header">
+                                    <span class="skill-name">Node.js</span>
+                                    <span class="skill-percent">0%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-skill="Express" data-percent="85">
+                                <div class="skill-header">
+                                    <span class="skill-name">Express.js</span>
+                                    <span class="skill-percent">0%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-skill="REST API" data-percent="90">
+                                <div class="skill-header">
+                                    <span class="skill-name">REST APIs</span>
+                                    <span class="skill-percent">0%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-skill="Git" data-percent="90">
+                                <div class="skill-header">
+                                    <span class="skill-name">Git & GitHub</span>
+                                    <span class="skill-percent">0%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3 class="category-title" data-text-en="DevOps & Cloud">DevOps & Cloud</h3>
+                        <div class="skill-items">
+                            <div class="skill-item" data-skill="AWS" data-percent="85">
+                                <div class="skill-header">
+                                    <span class="skill-name">AWS</span>
+                                    <span class="skill-percent">0%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-skill="Docker" data-percent="85">
+                                <div class="skill-header">
+                                    <span class="skill-name">Docker</span>
+                                    <span class="skill-percent">0%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-skill="Kubernetes" data-percent="80">
+                                <div class="skill-header">
+                                    <span class="skill-name">Kubernetes</span>
+                                    <span class="skill-percent">0%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-skill="Linux" data-percent="85">
+                                <div class="skill-header">
+                                    <span class="skill-name">Linux</span>
+                                    <span class="skill-percent">0%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </a>
-        <div class="project__info">
-          <h3 class="project__title">The Cache Bank <br />Landing Page</h3>
-          <p class="project__description">
-            The project is built using HTML
-            Tech Stack: Tailwind CSS, Javascript, HTML
-          </p>
-          <a href="https://cachex.netlify.app//" target="_blank">
-            <div class="project__live">live app</div>
-          </a><a href="https://github.com/thaboxan/THAJAF449_WFO2401_GROUPA_ThaboJafta_SDF11" target="_blank">
-            <div class="project__code">view source code</div>
-          </a>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section experience-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-number">03</span>
+                    <h2 class="section-title">
+                        <span class="title-bracket">&lt;</span>
+                        <span class="title-text" data-text-en="Experience">Experience</span>
+                        <span class="title-bracket">/&gt;</span>
+                    </h2>
+                    <div class="section-line"></div>
+                </div>
+                
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <div class="timeline-year">Apr 2025 - Present</div>
+                                <div class="timeline-badge">Current</div>
+                            </div>
+                            <h3 class="timeline-title" data-text-en="DevOps Engineer">DevOps Engineer</h3>
+                            <div class="timeline-company">
+                                <i class="fas fa-building"></i>
+                                FirstRand Corporate Centre x Wipro | Sandton, South Africa
+                            </div>
+                            <p class="timeline-description" data-text-en="Automated CI/CD pipelines using GitHub Actions, reducing deployment time and improving release consistency. Configured and managed containerized applications using Docker and Kubernetes. Implemented infrastructure monitoring using AWS CloudWatch.">
+                                Automated CI/CD pipelines using GitHub Actions, reducing deployment time and improving release consistency. Configured and managed containerized applications using Docker and Kubernetes. Implemented infrastructure monitoring using AWS CloudWatch.
+                            </p>
+                            <div class="timeline-achievements">
+                                <div class="achievement-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span data-text-en="Managed 66+ server infrastructure with Graylog logging">Managed 66+ server infrastructure with Graylog logging</span>
+                                </div>
+                                <div class="achievement-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span data-text-en="Reduced investigation time by 50%">Reduced investigation time by 50%</span>
+                                </div>
+                                <div class="achievement-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span data-text-en="Created reusable pipeline templates">Created reusable pipeline templates</span>
+                                </div>
+                            </div>
+                            <div class="timeline-tags">
+                                <span class="tag">GitHub Actions</span>
+                                <span class="tag">Docker</span>
+                                <span class="tag">Kubernetes</span>
+                                <span class="tag">AWS</span>
+                                <span class="tag">CloudWatch</span>
+                                <span class="tag">Graylog</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <div class="timeline-year">Oct 2024 - Mar 2025</div>
+                            </div>
+                            <h3 class="timeline-title" data-text-en="DevOps/Software Associate">DevOps/Software Associate</h3>
+                            <div class="timeline-company">
+                                <i class="fas fa-building"></i>
+                                Wipro | Sandton, South Africa
+                            </div>
+                            <p class="timeline-description" data-text-en="Developed responsive front-end interfaces using React.js, HTML5, CSS3, and Node.js. Designed backend systems using Node.js and Express.js. Built and maintained REST APIs and microservices with comprehensive test coverage.">
+                                Developed responsive front-end interfaces using React.js, HTML5, CSS3, and Node.js. Designed backend systems using Node.js and Express.js. Built and maintained REST APIs and microservices with comprehensive test coverage.
+                            </p>
+                            <div class="timeline-achievements">
+                                <div class="achievement-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span data-text-en="Built REST APIs with Jest testing">Built REST APIs with Jest testing</span>
+                                </div>
+                                <div class="achievement-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span data-text-en="Streamlined deployment with Docker/K8s">Streamlined deployment with Docker/K8s</span>
+                                </div>
+                            </div>
+                            <div class="timeline-tags">
+                                <span class="tag">React.js</span>
+                                <span class="tag">Node.js</span>
+                                <span class="tag">Express.js</span>
+                                <span class="tag">Docker</span>
+                                <span class="tag">Kubernetes</span>
+                                <span class="tag">Jest</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <div class="timeline-year">Oct 2024 - Dec 2024</div>
+                            </div>
+                            <h3 class="timeline-title" data-text-en="Cloud Computing Apprentice">Cloud Computing Apprentice</h3>
+                            <div class="timeline-company">
+                                <i class="fas fa-building"></i>
+                                Praesignis | Johannesburg, South Africa
+                            </div>
+                            <p class="timeline-description" data-text-en="Gained hands-on experience with core AWS services including EC2, S3, RDS, and Lambda. Configured virtual servers, cloud storage, and managed databases. Developed proficiency in Linux OS, command-line tools, and shell scripting.">
+                                Gained hands-on experience with core AWS services including EC2, S3, RDS, and Lambda. Configured virtual servers, cloud storage, and managed databases. Developed proficiency in Linux OS, command-line tools, and shell scripting.
+                            </p>
+                            <div class="timeline-achievements">
+                                <div class="achievement-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span data-text-en="AWS Certified Cloud Practitioner">AWS Certified Cloud Practitioner</span>
+                                </div>
+                                <div class="achievement-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span data-text-en="AWS re/Start Programme Graduate">AWS re/Start Programme Graduate</span>
+                                </div>
+                            </div>
+                            <div class="timeline-tags">
+                                <span class="tag">AWS</span>
+                                <span class="tag">EC2</span>
+                                <span class="tag">S3</span>
+                                <span class="tag">RDS</span>
+                                <span class="tag">Lambda</span>
+                                <span class="tag">Linux</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section projects-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-number">04</span>
+                    <h2 class="section-title">
+                        <span class="title-bracket">&lt;</span>
+                        <span class="title-text" data-text-en="Projects">Projects</span>
+                        <span class="title-bracket">/&gt;</span>
+                    </h2>
+                    <div class="section-line"></div>
+                </div>
+                
+                <div class="projects-carousel-wrapper">
+                    <div class="swiper projects-swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="project-card">
+                                    <div class="project-image">
+                                        <div class="project-overlay">
+                                            <div class="project-links">
+                                                <a href="https://www.beyondlimitsot.co.za" target="_blank" class="project-link" title="View Project">
+                                                    <i class="fas fa-external-link-alt"></i>
+                                                </a>
+                                                <a href="https://github.com/thaboxan/Beyondlimtsot" target="_blank" class="project-link" title="View Code">
+                                                    <i class="fab fa-github"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <img src="assets/beyondlimits.png" alt="Beyond Limits OT Website" class="project-img" style="width: 100%; height: 100%; object-fit: cover;">
+                                    </div>
+                                    <div class="project-content">
+                                        <h3 class="project-title" data-text-en="Beyond Limits OT">Beyond Limits OT</h3>
+                                        <p class="project-description" data-text-en="Professional occupational therapy practice website for Beyond Limits OT - serving Mthatha & East London, South Africa. Includes custom email setup and hosting.">
+                                            Professional occupational therapy practice website for Beyond Limits OT - serving Mthatha & East London, South Africa. Includes custom email setup and hosting.
+                                        </p>
+                                        <div class="project-tags">
+                                            <span class="tag">JavaScript</span>
+                                            <span class="tag">HTML5</span>
+                                            <span class="tag">CSS</span>
+                                            <span class="tag">Hosting</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="swiper-slide">
+                                <div class="project-card">
+                                    <div class="project-image">
+                                        <div class="project-overlay">
+                                            <div class="project-links">
+                                                <a href="https://autosynstudios.netlify.app/" target="_blank" class="project-link" title="View Project">
+                                                    <i class="fas fa-external-link-alt"></i>
+                                                </a>
+                                                <a href="https://github.com/thaboxan/Movie" target="_blank" class="project-link" title="View Code">
+                                                    <i class="fab fa-github"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <img src="assets/MovieWebApp.png" alt="Movie Web App" class="project-img" style="width: 100%; height: 100%; object-fit: cover;">
+                                    </div>
+                                    <div class="project-content">
+                                        <h3 class="project-title" data-text-en="Movie Web App">Movie Web App</h3>
+                                        <p class="project-description" data-text-en="A movie application that provides users with a seamless experience for browsing and searching movies using RESTful API integration.">
+                                            A movie application that provides users with a seamless experience for browsing and searching movies using RESTful API integration.
+                                        </p>
+                                        <div class="project-tags">
+                                            <span class="tag">ReactJS</span>
+                                            <span class="tag">CSS</span>
+                                            <span class="tag">Axios</span>
+                                            <span class="tag">REST API</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="swiper-slide">
+                                <div class="project-card">
+                                    <div class="project-image">
+                                        <div class="project-overlay">
+                                            <div class="project-links">
+                                                <a href="https://github.com/thaboxan/spring_api" target="_blank" class="project-link" title="View Code">
+                                                    <i class="fab fa-github"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="project-placeholder">
+                                            <i class="fas fa-tasks"></i>
+                                        </div>
+                                    </div>
+                                    <div class="project-content">
+                                        <h3 class="project-title" data-text-en="Todo List App">Todo List App</h3>
+                                        <p class="project-description" data-text-en="A full-stack todo list application with Spring Boot backend, PostgreSQL database, and a clean frontend interface. Containerized with Docker.">
+                                            A full-stack todo list application with Spring Boot backend, PostgreSQL database, and a clean frontend interface. Containerized with Docker.
+                                        </p>
+                                        <div class="project-tags">
+                                            <span class="tag">Spring Boot</span>
+                                            <span class="tag">PostgreSQL</span>
+                                            <span class="tag">Docker</span>
+                                            <span class="tag">JavaScript</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="swiper-slide">
+                                <div class="project-card">
+                                    <div class="project-image">
+                                        <div class="project-overlay">
+                                            <div class="project-links">
+                                           
+                                                <a href="https://github.com/thaboxan/AWS_Hosting-with-Custom-Domain" target="_blank" class="project-link" title="View Code">
+                                                    <i class="fab fa-github"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <img src="assets/aws.png" alt="AWS Cloud Hosting" class="project-img" style="width: 100%; height: 100%; object-fit: cover;">
+                                    </div>
+                                    <div class="project-content">
+                                        <h3 class="project-title" data-text-en="AWS Cloud Hosting">AWS Cloud Hosting</h3>
+                                        <p class="project-description" data-text-en="Production-ready AWS infrastructure with Route 53, S3 static hosting, CloudFront CDN, and ACM SSL certificates. Fully automated with Terraform IaC.">
+                                            Production-ready AWS infrastructure with Route 53, S3 static hosting, CloudFront CDN, and ACM SSL certificates. Fully automated with Terraform IaC.
+                                        </p>
+                                        <div class="project-tags">
+                                            <span class="tag">AWS</span>
+                                            <span class="tag">Terraform</span>
+                                            <span class="tag">Route 53</span>
+                                            <span class="tag">CloudFront</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Navigation -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                        
+                        <!-- Pagination -->
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section contact-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-number">05</span>
+                    <h2 class="section-title">
+                        <span class="title-bracket">&lt;</span>
+                        <span class="title-text" data-text-en="Contact">Contact</span>
+                        <span class="title-bracket">/&gt;</span>
+                    </h2>
+                    <div class="section-line"></div>
+                </div>
+                
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4 class="contact-label" data-text-en="Email">Email</h4>
+                                <a href="mailto:dev@thabojafta.co.za" class="contact-value">dev@thabojafta.co.za</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4 class="contact-label" data-text-en="Phone">Phone</h4>
+                                <a href="tel:+27721641195" class="contact-value">072 164 1195</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4 class="contact-label" data-text-en="Location">Location</h4>
+                                <span class="contact-value" data-text-en="Johannesburg, South Africa">Johannesburg, South Africa</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <form class="contact-form" id="contactForm" action="https://formspree.io/f/xdaaepby" method="POST">
+                        <div class="form-group">
+                            <input type="text" name="name" class="form-input" placeholder="Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" class="form-input" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="subject" class="form-input" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" class="form-input form-textarea" rows="5" placeholder="Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-submit">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                        <div id="formStatus" class="form-status" style="display: none; margin-top: 1rem; padding: 1rem; border-radius: 8px; text-align: center;"></div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-text-wrapper">
+                    <p class="footer-text">
+                        <span class="footer-copyright">© 2026 Thabo Jafta</span>
+                        <span class="footer-divider">•</span>
+                        <span class="footer-built">Built with passion and code</span>
+                    </p>
+                    <p class="footer-author">
+    
+           
+                    </p>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/in/thabojafta1" target="_blank" rel="noopener noreferrer" class="footer-social-link">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://www.github.com/thaboxan" class="footer-social-link" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+        
+                </div>
+            </div>
         </div>
+    </footer>
 
-
-      </div>
-    </section>
-    <section class="contact" id="contact">
-      <h2 class="contact__heading section-heading" style="text-align: center;">Contact</h2>
-      <p class="contact__text">
-        Have a question or want to work together? Leave your details and I'll
-        get back to you as soon as possible.
-      </p>
-      <form class="contact__form" action="https://formspree.io/f/xdknonwy" method="POST">
-        <input class="contact__form-name" name="name" placeholder="Name" required />
-        <input class="contact__form-email" type="email" name="_replyto" placeholder="Email" required />
-        <textarea class="contact__form-message" name="message" placeholder="Message" required></textarea>
-        <div class="contact__form-error-submit">
-          <button type="submit" class="contact__form-submit">Submit</button>
-        </div>
-      </form>
-
-    </section>
-
-    <!-- <div class="chatbot-icon" id="chatbotIcon">
-        <i class="fa-solid fa-robot"></i>
-    </div> -->
-
-    <!-- <div class="chatbot" id="chatbot">
-        <header>
-            <h2>Alexis</h2>
-            <button id="minimizeBtn">–</button>
-            <button id="closeBtn">X</button>
-        </header>
-        <ul class="chatbox">
-            <li class="chat incoming">
-                <p>Hi! I'm your Thabo's assistant. Ask me about skills, experience, projects, or how to get in touch!</p>
-            </li>
-        </ul>
-        <div class="input-area">
-            <input type="text" placeholder="Type your message..." id="userInput" />
-            <button id="sendBtn">Send</button>
-        </div> -->
-    </div>
-  </main>
-  <footer class="footer">
-    <a href="#hero">
-      <div class="return-home">
-        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 24 24">
-          <title></title>
-          <path fill="#fafafa"
-            d="M17.707 10.293l-5-5c-0.391-0.391-1.024-0.391-1.414 0l-5 5c-0.391 0.391-0.391 1.024 0 1.414s1.024 0.391 1.414 0l4.293-4.293 4.293 4.293c0.391 0.391 1.024 0.391 1.414 0s0.391-1.024 0-1.414zM17.707 17.293l-5-5c-0.391-0.391-1.024-0.391-1.414 0l-5 5c-0.391 0.391-0.391 1.024 0 1.414s1.024 0.391 1.414 0l4.293-4.293 4.293 4.293c0.391 0.391 1.024 0.391 1.414 0s0.391-1.024 0-1.414z">
-          </path>
-        </svg>
-      </div>
-    </a>
-    <div class="socials">
-      <a href="https://github.com/thaboxan" target="_blank">
-        <div class="socials__github">
-          <img src="images/icons8-github-480.png" alt="" />
-        </div>
-      </a>
-      <a href="https://www.linkedin.com/in/thabojafta1/" target="_blank">
-        <div class="socials__email">
-          <img src="images/icons8-linkedin-500.png" alt="" />
-        </div>
-      </a>
-    </div>
-    <p class="copyright">Thabo Jafta the Dev &copy;<span id="current-year"></span></p>
-  </footer>
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Motion One loaded dynamically -->
+    <script src="js/animations.js"></script>
+    <script src="js/script.js"></script>
 </body>
-
 </html>
+
